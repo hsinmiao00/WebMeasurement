@@ -483,10 +483,11 @@
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8 and later.
-\cite{IAPPbook}
+\IEEEPARstart{I}{n} 
+this project, we will be comparing the amount of trackers on websites that operate in various countries with different privacy models. We have chosen France and Germany to represent the comprehensive model, the United States and Japan to represent the sectoral model, Australia and New Zealand to represent the co-regulatory model, and finally Russia and China to represent the mixed/no-policy model. The sites that we are interested in are Alexa Top 500 sites that have domains in multiple countries. For example, we can compare Google.com (US version) with Google.com (German version with no country subdomain) with Google.com.de (German version with country subdomain) and determine if there is a difference in terms of trackers. We will also examine how connecting to these sites from different countries affects tracking.
+
+We plan to locate and identify these trackers using 3rd party HTTP requests and cookies, examining other criteria if necessary. Automation of the process will be handled using the OpenWPM \cite{openwpm} tool which allows for synchronization across browsers and virtual machines ensuring that requests will occur at the same time. A Tor proxy \cite{tor} will be used to allow us to spoof the location we connect from.
+
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
 
@@ -587,13 +588,57 @@ IEEEtran.cls version 1.8 and later.
 
 
 \section{Background and Motivation}
-Privacy laws have been enacted worldwide with the purpose of protecting internet users\' private information. Privacy laws can be divided into four main models that differ in scope, enforcement, and adjudication: the comprehensive model, the sectoral model, the co-regulatory model, and no-privacy model at all. These models impact how countries view privacy, specifically online tracking and privacy legislation.
+Privacy laws have been enacted worldwide with the purpose of protecting internet users' private information. Privacy laws can be divided into four main models \cite{IAPPbook} that differ in scope, enforcement, and adjudication: the comprehensive model, the sectoral model, the co-regulatory model, and mixed/no-policy model. These models impact how countries handle privacy both legally and culturally, specifically in the realms of online tracking and privacy legislation. While using the Ghostery browser add-on we discovered that websites utilize a diverse plethora of trackers for various purposes. There is currently a lack of information as to how trackers differ between countries that employ these different models.
 
 
 \section{Related Work}
-Overall perspective: studies on jurisdictional differences haven?t really been done in the past
+Privacy in the news seems inescapable; a general concern regarding the intrusiveness and pervasiveness of online tracking, advertising, monitoring has caught the public attention. For example, concerns over the activities of social networking sites and advertisers such as Facebook \cite{wsj_fb} bring up issues of anonymity and tracking in daily life. Similarly, the level of privacy protection put into place by industry giants such as Google has come under scrutiny \cite{Google_EU_marketingland} as jurisdictions with more comprehensive privacy regulations have called the effectiveness of their protections into question.
+
+These worries also demonstrate the large amount of change that the Internet has undergone in a relatively short amount of time. As Mayer and Mitchell note \cite{Mayer_Mitchell}, individual instances of web content have evolved from a single-origin affair into a conglomeration of  ``myriad unrelated  `third-party' websites," each facilitating anything from advertising to social media. Furthermore, this explosion of third parties has existed an environment with little to no regulation until very recently \cite{Mayer_Mitchell}, with advances only occurring in the comprehensive regulatory environment provided by the European Union (see Background).  
+
+\subsection{Privacy-related Web Measurement}
+This tangled web of privacy, regulation, and jurisdiction raises many concerns. Coupled with the increased salience of online privacy concerns, this has led to an explosion of privacy-related web measurement studies in recent years. For example, Engelhardt et al. \cite{openwpm_article} have identified 32 studies that they categorize as ``web privacy measurement studies." This category of study has great breadth, ranging from technical analyses of information leaked by web scripting languages \cite{jang} to empirical analyses of search engine personalization \cite{hannak}.  In this vein, numerous comparison-style studies have also been run, touching on diverse subjects such as discrimination in online advertising \cite{sweeney} and the effectiveness of online privacy tools \cite{balebako}.
+
+While the above studies make valuable contributions by taking on tasks like revealing the sources of potential privacy harms, detailing the effects of these third party entities, and taking a user-centric to studying and enhancing privacy, they generally do not explore the impact of industry and country-level policy on the overall incidence of these third parties. Connolly \cite{connolly} comes the closest, performing an evaluation of various websites' compliance with the European Union's ``Safe Harbor" privacy policy. Finding an astoundingly small subset of companies in compliance with Safe Harbor directives, Connolly discusses the ``significant" privacy risk to consumers resulting from noncompliance.  Issues like these raise the necessity for a more comprehensive measurement of jurisdictional differences in tracking and advertising activity (see Background and Motivation).
+
+\subsection{Web Measurement Methodology}
+Web measurement studies are considered challenging for two reasons: causality and automation \cite{openwpm_article}. These difficulties make researchers design experiments that lead to inconsistency and reinvention. In order to solve the problem, Englehardt et al. conducted a study that reviewed general experimental frameworks and performed methodological analyses of extant web measurement studies. With this framework in mind, the authors developed a platform, OpenWPM \cite{openwpm}, that addressed many of the issues of flexibility and scalability surrounding past web measurement studies. The current study will be performed using this platform, as it builds upon proven frameworks such as Selenium \cite{Selenium} and has been validated in several studies \cite{openwpm}\cite{openwpm_article}. We hope to build upon this framework and avoid further problems, especially those surrounding replication of effort and methodological inconsistencies.
 
 \section{Timeline}
+\begin{enumerate}
+	\item 10/24 - 11/4:
+	\begin{enumerate}
+		\item Set up the Tor network. (Scott)
+		\item Set up the OpenWPM platform. (Nathaniel and Hsin) 
+		\begin{enumerate}
+			\item Run test cases and fully test effectiveness of definitions.
+		\end{enumerate}
+		\item Obtain the website list from Alexa. (Nathaniel and Hsin) 
+		\begin{enumerate}
+			\item Compile into sets of websites, broken down by country and analysis type.
+		\end{enumerate}
+		\item Look into Parallel Data Lab and/or set up appropriate hardware for virtual machines.
+	\end{enumerate}
+	\item11/4 - 11/25:
+	\begin{enumerate}
+		\item Write and test OpenWPM script for experiment automation.
+		\item Run experiment.
+		\item Data analysis.
+		\begin{enumerate}
+			\item Extract data from OpenWPM databases.
+			\item Statistical analysis of data sets.
+		\end{enumerate}
+	\end{enumerate}
+	\item 11/25 - 12/4:
+	\begin{enumerate}
+		\item Finalize the result.
+		\item Design the poster.
+		\item Write the final paper.
+		\item Extend literature review.
+	\end{enumerate}
+\item 12/4: Poster fair.
+\item 12/12: Final paper.
+\end{enumerate}
 
 
 

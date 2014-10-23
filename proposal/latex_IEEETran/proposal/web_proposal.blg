@@ -3,44 +3,59 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: web_proposal.aux
 The style file: ieeetr.bst
 Database file #1: ./web.bib
-You've used 1 entry,
+Warning--entry type for "selenium" isn't style-file defined
+--line 12 of file ./web.bib
+Warning--entry type for "connolly" isn't style-file defined
+--line 18 of file ./web.bib
+Warning--entry type for "sweeney" isn't style-file defined
+--line 33 of file ./web.bib
+Warning--entry type for "Google_EU_marketingland" isn't style-file defined
+--line 63 of file ./web.bib
+Warning--entry type for "wsj_fb" isn't style-file defined
+--line 69 of file ./web.bib
+Warning--entry type for "tor" isn't style-file defined
+--line 75 of file ./web.bib
+Warning--entry type for "openwpm" isn't style-file defined
+--line 81 of file ./web.bib
+You've used 13 entries,
             1876 wiz_defined-function locations,
-            483 strings with 3641 characters,
-and the built_in function-call counts, 168 in all, are:
-= -- 14
-> -- 4
+            530 strings with 5695 characters,
+and the built_in function-call counts, 1623 in all, are:
+= -- 125
+> -- 52
 < -- 0
-+ -- 2
-- -- 1
-* -- 7
-:= -- 32
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 0
++ -- 26
+- -- 13
+* -- 63
+:= -- 249
+add.period$ -- 7
+call.type$ -- 13
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 9
-empty$ -- 21
-format.name$ -- 1
-if$ -- 39
+cite$ -- 13
+duplicate$ -- 82
+empty$ -- 232
+format.name$ -- 13
+if$ -- 397
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 7
-num.names$ -- 1
-pop$ -- 6
+int.to.str$ -- 13
+missing$ -- 7
+newline$ -- 43
+num.names$ -- 13
+pop$ -- 61
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 61
 stack$ -- 0
 substring$ -- 0
-swap$ -- 1
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 1
-width$ -- 2
-write$ -- 11
+while$ -- 13
+width$ -- 15
+write$ -- 93
+(There were 7 warnings)
