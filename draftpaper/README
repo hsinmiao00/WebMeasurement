@@ -1,0 +1,10 @@
+This is the latex template of our proposal.
+
+Usage:
+1. Download MacTex
+2. Use TexShop to edit web_proposal.tex
+3. Use BibDesk to add references
+4. In TexShop, Macros -> Applescript -> Bibliography to compile the reference
+5. Press the "Typeset" button to compile the web_proposal.tex file into pdf
+
+Written by Hsin Miao 10/21
