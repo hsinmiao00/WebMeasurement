@@ -1,6 +1,8 @@
 import requests
 import sqlite3
 import logging
+import tldextract
+from itertools import groupby
 from adblockparser import AdblockRules
 
 class WPMResults(object):
@@ -20,15 +22,15 @@ class WPMResults(object):
         
     @classmethod
     def cleanQuery(_class, result):
-        return map(lambda r: r[0], result)
-        
-    def setupRules(self):
-        if not hasattr(self, 'trackers') or not hasattr(self, 'ads'):
-            self.trackers = self.rulesFromURL(self.TRACKING_LIST)
-            self.ads = self.rulesFromURL(self.AD_LIST)            
+        # Turn plaintext URLs into parsed URLs, and strip newlines
+        cleaned = [(url, tldextract.extract(topurl.strip())) for url, topurl in result]
+        # Group all subrequests by their top URL and turn into a dict (top:sublist)
+        grouped = {top:list(url for url, top in subgroup) for top, subgroup in groupby(cleaned, lambda row: row[1])} 
+        return grouped
         
     def check(self, rules, query):
-        self.setupRules()
+        # Cache rules checks as they take a long time. 
+        # A query hash = hash of the reprs of (rules+query+db object)
         checkHash = hash("{}{}{}".format(rules,query,self.db_connection))
         
         if checkHash in self.cache:
@@ -36,16 +38,21 @@ class WPMResults(object):
         else:    
             self.log.info("Running query {}".format(query))
             self.query.execute(query)
-            results = self.cleanQuery(self.query.fetchall())
+            results = self.query.fetchall()
             n = len(results)
+            results = self.cleanQuery(results)
             self.log.info("Query returned {} results".format(n))
         
             self.log.info("Checking rules set {}".format(rules))
             checked = {}
-            for i, url in enumerate(results):
-                if i % 20 == 0 or i == n:
-                    self.log.debug("Checking URL {}/{}".format(i,n))
-                checked[url] = rules.should_block(url)
+            for top in results:
+                this_n = len(results[top])
+                checked[top] = {}
+                self.log.info("Checking {} subrequests from {}".format(this_n, top))
+                for i, url in enumerate(results[top]):
+                    if i % 20 == 0 or i == n:
+                        self.log.info("Checking URL {}/{}".format(i,this_n))
+                        checked[top][url] = rules.should_block(url)
             self.cache[checkHash] = checked
             
             return checked
