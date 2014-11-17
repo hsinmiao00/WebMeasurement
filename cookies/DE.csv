@@ -1,52 +1,52 @@
-========cookies=======
-domain:, cookie count:0, third-party cookie count:0
-domain:google, cookie count:21, third-party cookie count:0
-domain:facebook, cookie count:4, third-party cookie count:0
-domain:amazon, cookie count:178, third-party cookie count:49
-domain:youtube, cookie count:18, third-party cookie count:12
-domain:ebay, cookie count:93, third-party cookie count:5
-domain:google, cookie count:9, third-party cookie count:0
-domain:wikipedia, cookie count:2, third-party cookie count:0
-domain:yahoo, cookie count:57, third-party cookie count:29
-domain:web, cookie count:395, third-party cookie count:74
-domain:gmx, cookie count:171, third-party cookie count:151
-domain:bild, cookie count:1001, third-party cookie count:577
-domain:uimserv, cookie count:12, third-party cookie count:0
-domain:t-online, cookie count:657, third-party cookie count:207
-domain:spiegel, cookie count:252, third-party cookie count:74
-domain:xhamster, cookie count:148, third-party cookie count:0
-domain:mobile, cookie count:96, third-party cookie count:33
-domain:chip, cookie count:1601, third-party cookie count:202
-domain:gutefrage, cookie count:189, third-party cookie count:184
-domain:immobilienscout24, cookie count:249, third-party cookie count:104
-domain:paypal, cookie count:39, third-party cookie count:13
-domain:live, cookie count:31, third-party cookie count:17
-domain:blogspot, cookie count:23, third-party cookie count:23
-domain:ask, cookie count:67, third-party cookie count:4
-domain:focus, cookie count:1358, third-party cookie count:88
-========http_requests=======
-domain:, request count:0, third-party request count:0
-domain:google, request count:15, third-party request count:2
-domain:facebook, request count:32, third-party request count:29
-domain:amazon, request count:175, third-party request count:17
-domain:youtube, request count:64, third-party request count:52
-domain:ebay, request count:188, third-party request count:1
-domain:google, request count:5, third-party request count:0
-domain:wikipedia, request count:21, third-party request count:3
-domain:yahoo, request count:62, third-party request count:36
-domain:web, request count:262, third-party request count:32
-domain:gmx, request count:235, third-party request count:25
-domain:bild, request count:387, third-party request count:213
-domain:uimserv, request count:2, third-party request count:0
-domain:t-online, request count:221, third-party request count:89
-domain:spiegel, request count:165, third-party request count:32
-domain:xhamster, request count:94, third-party request count:57
-domain:mobile, request count:73, third-party request count:48
-domain:chip, request count:247, third-party request count:67
-domain:gutefrage, request count:87, third-party request count:48
-domain:immobilienscout24, request count:134, third-party request count:36
-domain:paypal, request count:38, third-party request count:6
-domain:live, request count:26, third-party request count:9
-domain:blogspot, request count:16, third-party request count:15
-domain:ask, request count:14, third-party request count:1
-domain:focus, request count:258, third-party request count:53
+domain, cookie_count, 3rd party cookie_count
+, 0, 0
+google, 21, 0
+facebook, 4, 0
+amazon, 178, 49
+youtube, 18, 12
+ebay, 93, 5
+google, 9, 0
+wikipedia, 2, 0
+yahoo, 57, 29
+web, 395, 74
+gmx, 171, 151
+bild, 1001, 577
+uimserv, 12, 0
+t-online, 657, 207
+spiegel, 252, 74
+xhamster, 148, 0
+mobile, 96, 33
+chip, 1601, 202
+gutefrage, 189, 184
+immobilienscout24, 249, 104
+paypal, 39, 13
+live, 31, 17
+blogspot, 23, 23
+ask, 67, 4
+focus, 1358, 88
+domain, request_count, 3rd party request_count
+, 0, 0
+google, 15, 2
+facebook, 32, 29
+amazon, 175, 17
+youtube, 64, 52
+ebay, 188, 1
+google, 5, 0
+wikipedia, 21, 3
+yahoo, 62, 36
+web, 262, 32
+gmx, 235, 25
+bild, 387, 213
+uimserv, 2, 0
+t-online, 221, 89
+spiegel, 165, 32
+xhamster, 94, 57
+mobile, 73, 48
+chip, 247, 67
+gutefrage, 87, 48
+immobilienscout24, 134, 36
+paypal, 38, 6
+live, 26, 9
+blogspot, 16, 15
+ask, 14, 1
+focus, 258, 53

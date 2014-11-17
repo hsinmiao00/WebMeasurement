@@ -10,10 +10,12 @@ def analyze(DBFILE,TYPE):
     cursor = db.cursor()
     
     if(TYPE == "cookies"):
-        print("========cookies=======")
+        #print("========cookies=======")
+        print("domain, cookie_count, 3rd party cookie_count")
         cursor.execute('''SELECT domain, top_url FROM cookies''')
     elif(TYPE == "http_requests"):
-        print("========http_requests=======")
+        #print("========http_requests=======")
+        print("domain, request_count, 3rd party request_count")
         cursor.execute('''SELECT url, top_url FROM http_requests''')
     else:
         print("Please input TYPE")
@@ -29,10 +31,12 @@ def analyze(DBFILE,TYPE):
         #print(domainName)
         
         if( topURL != domainName ):
-            if(TYPE == "cookies"):
-                print("domain:"+topURL+", cookie count:"+str(count)+", third-party cookie count:"+str(hit))
-            else:
-                print("domain:"+topURL+", request count:"+str(count)+", third-party request count:"+str(hit))
+            #if(TYPE == "cookies"):
+                #print("domain:"+topURL+", cookie count:"+str(count)+", third-party cookie count:"+str(hit))
+                #print(topURL+", "+str(count)+", "+str(hit))
+            #else:
+                #print("domain:"+topURL+", request count:"+str(count)+", third-party request count:"+str(hit))
+            print(topURL+", "+str(count)+", "+str(hit))
                 
             topURL = domainName
             count = 0
