@@ -50,9 +50,9 @@ class WPMResults(object):
                 checked[top] = {}
                 self.log.info("Checking {} subrequests from {}".format(this_n, top))
                 for i, url in enumerate(results[top]):
+                    checked[top][url] = rules.should_block(url)
                     if i % 20 == 0 or i == n:
                         self.log.info("Checking URL {}/{}".format(i,this_n))
-                        checked[top][url] = rules.should_block(url)
             self.cache[checkHash] = checked
             
             return checked

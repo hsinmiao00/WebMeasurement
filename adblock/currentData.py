@@ -50,7 +50,7 @@ for cc in countrycodes:
 
 # Write CSV files
 for cc in csv_buffer:
-    fn = "results-adblock-{}.csv".format(cc)
+    fn = "reqs-results-adblock-{}.csv".format(cc)
     logging.getLogger(__name__).info("Writing output to {}".format(fn))
     with open(fn, 'w') as f:
         writer = csv.writer(f)
