@@ -1,16 +1,19 @@
 \begin{thebibliography}{10}
 
-\bibitem{openwpm}
-OpenWPM, ``{OpenWPM. [online]. available: https://github.com/citp/OpenWPM}.''
-
-\bibitem{tor}
-Tor, ``{Tor Project. [online]. available:
-  https://www.torproject.org/index.html.en}.''
-
 \bibitem{IAPPbook}
 {Peter P. Swire and Kenesa Ahmad}, {\em {Foundations of Information Privacy and
   Data Protection: A Survey of Global Concepts, Laws and Practices}}.
 \newblock IAPP, 2012.
+
+\bibitem{Alexa}
+Alexa, ``{The top 500 sites on the web. [online]. available:
+  http://www.alexa.com/topsites}.''
+
+\bibitem{adblock}
+``{Adblock Plus. [online]. available: https://adblockplus.org/en/about}.''
+
+\bibitem{openwpm}
+OpenWPM, ``{OpenWPM. [online]. available: https://github.com/citp/OpenWPM}.''
 
 \bibitem{wsj_fb}
 J.~Marshall, ``{Facebook Extends Reach With New Advertising Platform. [online].
@@ -45,8 +48,7 @@ G.~Sterling, ``{EU Seeking Numerous Google Privacy Disclosures, Policy Changes.
   the 22Nd International Conference on World Wide Web}}, 2013.
 
 \bibitem{sweeney}
-L.~Sweeney, ``{Discrimination in Online Ad Delivery. [online]. available:
-  http://queue.acm.org/detail.cfm?id=2460278}.''
+L.~Sweeney, ``{Discrimination in Online Ad Delivery},'' {\em Queue}, 2013.
 
 \bibitem{balebako}
 {Rebecca Balebako, Pedro G. Leon, Richard Shay, Blase Ur, Yang Wang, Lorrie
@@ -60,5 +62,20 @@ L.~Sweeney, ``{Discrimination in Online Ad Delivery. [online]. available:
 
 \bibitem{Selenium}
 SeleniumHQ, ``{SeleniumHQ. [online]. available: http://www.seleniumhq.org/}.''
+
+\bibitem{torsocks5}
+C.~Hansen, ``{How to use Tor as a Socks5 proxy. [online]. available:
+  http://www.deepdotweb.com/2014/05/23/use-tor-socks5-proxy/}.''
+
+\bibitem{MITM}
+``{Issues with MITMProxy and upstream SOCKS proxies. [online]. available:
+  https://github.com/mitmproxy/mitmproxy/issues/211}.''
+
+\bibitem{amazonregion}
+``{Regional Availability of AWS EC2. [online]. available:
+  http://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/}.''
+
+\bibitem{easylist}
+``{Easylist. [online]. available: https://easylist.adblockplus.org}.''
 
 \end{thebibliography}

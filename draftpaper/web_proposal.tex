@@ -373,7 +373,7 @@
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 % Do not put math or special symbols in the title.
-\title{Variations in Tracking in Relation to Geographic Location (Project Proposal)}
+\title{Variations in Tracking in Relation to Geographic Location}
 %
 %
 % author names and IEEE memberships
@@ -468,7 +468,7 @@
 
 
 
-\section{Project Description}
+\section{Introduction}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -484,10 +484,14 @@
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{I}{n} 
-this project, we will be comparing the amount of trackers on websites that operate in various countries with different privacy models. We have chosen France and Germany to represent the comprehensive model, the United States and Japan to represent the sectoral model, Australia and New Zealand to represent the co-regulatory model, and finally Russia and China to represent the mixed/no-policy model. The sites that we are interested in are Alexa Top 500 sites that have domains in multiple countries. For example, we can compare Google.com (US version) with Google.com (German version with no country subdomain) with Google.com.de (German version with country subdomain) and determine if there is a difference in terms of trackers. We will also examine how connecting to these sites from different countries affects tracking. For example, if connecting to Google.com.de from the United States and Germany yields different results in terms of trackers.
+\IEEEPARstart{P}{rivacy} 
+Privacy laws have been enacted worldwide with the purpose of protecting internet users' private information. Privacy laws can be divided into four main models \cite{IAPPbook} that differ in scope, enforcement, and adjudication: the comprehensive model, the sectoral model, the co-regulatory model, and mixed/no-policy model. These models impact how countries handle privacy both legally and culturally, specifically in the realms of online tracking and privacy legislation. Besides, we discovered that websites utilize a diverse plethora of trackers for various purposes. However, there is currently a lack of information as to how trackers differ between countries that employ these different models. The purpose of this project is to find the relationship between the number of trackers and different countries. 
 
-We plan to locate and identify these trackers using 3rd party HTTP requests and cookies, examining other criteria if necessary. Automation of the process will be handled using the OpenWPM \cite{openwpm} tool which allows for synchronization across browsers and virtual machines ensuring that requests will occur at the same time. A Tor proxy \cite{tor} will be used to allow us to spoof the location we connect from.
+In this project, we compared the amount of trackers on websites that operate in various countries with different privacy models. We have chosen Germany to represent the comprehensive model, the United States and Japan to represent the sectoral model, and Australia to represent the co-regulatory model. The sites that we are interested in are Alexa Top 500 sites \cite{Alexa} that have domains in multiple countries. We utilized Amazon Web Services to visit and crawl the data from the websites by servers in those countries. 
+
+We locate and identify these trackers using 3rd party HTTP requests and cookies. In addition, we identify ads from the websites by using a list provided by AdBlock browser extension \cite{adblock}. Automation of the process are handled using the OpenWPM \cite{openwpm} tool which allows for synchronization across browsers and virtual machines ensuring that requests will occur at the same time. 
+
+In the following sections, we will first review some related literatures. Detail description of our method and experimental results are stated in Section III and IV. Discussion and future works are described in Section V and VI.
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
@@ -587,15 +591,10 @@ We plan to locate and identify these trackers using 3rd party HTTP requests and 
 % stfloats package.
 
 
-
-\section{Background and Motivation}
-Privacy laws have been enacted worldwide with the purpose of protecting internet users' private information. Privacy laws can be divided into four main models \cite{IAPPbook} that differ in scope, enforcement, and adjudication: the comprehensive model, the sectoral model, the co-regulatory model, and mixed/no-policy model. These models impact how countries handle privacy both legally and culturally, specifically in the realms of online tracking and privacy legislation. Besides, we discovered that websites utilize a diverse plethora of trackers for various purposes. However, there is currently a lack of information as to how trackers differ between countries that employ these different models. The purpose of this project is to find the relationship between the number of trackers and different countries.
-
-
 \section{Related Work}
 Privacy in the news seems inescapable; a general concern regarding the intrusiveness and pervasiveness of online tracking, advertising, monitoring has caught the public attention. For example, concerns over the activities of social networking sites and advertisers such as Facebook \cite{wsj_fb} bring up issues of anonymity and tracking in daily life. Similarly, the level of privacy protection put into place by industry giants such as Google has come under scrutiny \cite{Google_EU_marketingland} as jurisdictions with more comprehensive privacy regulations have called the effectiveness of their protections into question.
 
-These worries also demonstrate the large amount of change that the Internet has undergone in a relatively short amount of time. As Mayer and Mitchell note \cite{Mayer_Mitchell}, individual instances of web content have evolved from a single-origin affair into a conglomeration of  ``myriad unrelated  `third-party' websites," each facilitating anything from advertising to social media. Furthermore, this explosion of third parties has existed an environment with little to no regulation until very recently \cite{Mayer_Mitchell}, with advances only occurring in the comprehensive regulatory environment provided by the European Union (see Background).  
+These worries also demonstrate the large amount of change that the Internet has undergone in a relatively short amount of time. As Mayer and Mitchell note \cite{Mayer_Mitchell}, individual instances of web content have evolved from a single-origin affair into a conglomeration of  ``myriad unrelated  `third-party' websites," each facilitating anything from advertising to social media. Furthermore, this explosion of third parties has existed an environment with little to no regulation until very recently \cite{Mayer_Mitchell}, with advances only occurring in the comprehensive regulatory environment provided by the European Union.  
 
 \subsection{Privacy-related Web Measurement}
 This tangled web of privacy, regulation, and jurisdiction raises many concerns. Coupled with the increased salience of online privacy concerns, this has led to an explosion of privacy-related web measurement studies in recent years. For example, Engelhardt et al. \cite{openwpm_article} have identified 32 studies that they categorize as ``web privacy measurement studies." This category of study has great breadth, ranging from technical analyses of information leaked by web scripting languages \cite{jang} to empirical analyses of search engine personalization \cite{hannak}.  In this vein, numerous comparison-style studies have also been run, touching on diverse subjects such as discrimination in online advertising \cite{sweeney} and the effectiveness of online privacy tools \cite{balebako}.
@@ -605,42 +604,146 @@ While the above studies make valuable contributions by taking on tasks like reve
 \subsection{Web Measurement Methodology}
 Web measurement studies are considered challenging for two reasons: causality and automation \cite{openwpm_article}. These difficulties make researchers design experiments that lead to inconsistency and reinvention. In order to solve the problem, Englehardt et al. conducted a study that reviewed general experimental frameworks and performed methodological analyses of extant web measurement studies. With this framework in mind, the authors developed a platform, OpenWPM \cite{openwpm}, that addressed many of the issues of flexibility and scalability surrounding past web measurement studies. The current study will be performed using this platform, as it builds upon proven frameworks such as Selenium \cite{Selenium} and has been validated in several studies \cite{openwpm}\cite{openwpm_article}. We hope to build upon this framework and avoid further problems, especially those surrounding replication of effort and methodological inconsistencies.
 
-\section{Timeline}
-\begin{enumerate}
-	\item 10/24 - 11/4:
-	\begin{enumerate}
-		\item Set up the Tor network. (Scott)
-		\item Set up the OpenWPM platform. (Hsin) 
-		\begin{enumerate}
-			\item Run test cases and fully test effectiveness of definitions.
-		\end{enumerate}
-		\item Obtain the website list from Alexa. (Nathaniel) 
-		\begin{enumerate}
-			\item Compile into sets of websites, broken down by country and analysis type.
-		\end{enumerate}
-		\item Look into Parallel Data Lab and/or set up appropriate hardware for virtual machines. (Scott)
-	\end{enumerate}
-	\item11/4 - 11/25:
-	\begin{enumerate}
-		\item Write and test OpenWPM script for experiment automation.
-		\item Run experiment.
-		\item Data analysis.
-		\begin{enumerate}
-			\item Extract data from OpenWPM databases.
-			\item Statistical analysis of data sets.
-		\end{enumerate}
-	\end{enumerate}
-	\item 11/25 - 12/4:
-	\begin{enumerate}
-		\item Finalize the result.
-		\item Design the poster.
-		\item Write the final paper.
-		\item Extend literature review.
-	\end{enumerate}
-\item 12/4: Poster fair.
-\item 12/12: Final paper.
-\end{enumerate}
+\section{Method}
+In our proposal, we discussed using Tor as a proxy to set our location. Tor allows users to specify exit nodes using 2-letter country codes and restricts exiting traffic to nodes in that country. This is done using a simple command-line flag when starting Tor. Tor utilizes the SOCKS5 (Socket Secure) protocol when it is operating as a proxy \cite{torsocks5}. The OpenWPM tool we are using to collect our results utilizes and relies upon a Python library called MITMProxy. This library allows OpenWPM to collect all requests and cookies at the proxy and store the results, including those that would normally be encrypted (hence the man-in-the-middle nature of the proxy). Our proposed architecture would have required the proxy created by OpenWPM to communicate with Tor directly using SOCKS. Unfortunately, MITMProxy has known problems communicating with upstream SOCKS proxies and we could not obtain results using this combination of technologies \cite{MITM}. Due to this, we were forced to look for an alternative method.
 
+The best alternative we found was Amazon Web Services (AWS) EC2. AWS provides cloud-based virtual machines that can be configured in numerous ways. AWS employs a 'pay-for-what-you-use' model, so it is economically convenient for us to use. We installed OpenWPM on these machines and ran our tests from the cloud without having to rely on a proxy to set our location. AWS offers virtual machines in any of the following places: Virginia (US), Ireland (EU), Frankfurt (EU), Oregon (US), California (US), Singapore (Asia), Sydney (AUS), Sao Paolo (South America), and Tokyo (JP) \cite{amazonregion}. This covers almost all of the regions we would like to examine -- the only regions not represented are Russia and China which are currently not options when using AWS EC2.
+
+\subsection{OpenWPM}
+
+The next step is to collect data on a number of metrics related to tracking, including the number of cookies and HTTP requests. Engelhardt et al.'s OpenWPM platform is a purpose-built web measurement platform that logs a large amount of web session data in a standardized SQLite database format, making this study a perfect environment in which to use the platform. We utilized the most recent publicly available version of OpenWPM for the data collection portion of our study and used the platform?s API to programmatically crawl a list of the top 25 websites as defined by Alexa \cite{Alexa}. OpenWPM?s ?headless? Firefox backend was used for the crawl with both JavaScript and Flash enabled.
+
+\subsection{Heuristic: First vs. Third Party Origins}
+
+Two of our variables of interest are located within different SQLite tables generated with each OpenWPM crawl: cookies and http\_requests. We extracted the domains of cookies and the full URLs of HTTP requests from these two tables by using the sqlite3 library in Python. In order to further analyze first-party and third-party cookies and HTTP requests, we set a rule to determine whether the hyperlink in a record is related to the website where the record is extracted. To be more specific, if a hyperlink contains the domain name of the extracted website, it is a first-party cookie or HTTP request; otherwise, it is a third-party one. For example, if a cookie is extracted from amazon.de with the domain fls-eu.amazon.de, it is a first-party cookie because of an identical base domain. In contrast, if a cookie also extracted from amazon.de with the domain zanox.com, it is a third-party cookie because of the differing domains. By implementing these procedures, we can use statistical tools to analyze the collected data.
+
+\subsection{Heuristic: AdBlock ``easylists"}
+
+AdBlock Plus \cite{adblock} is a popular browser extension available for both Firefox and Chrome which allows users to filter and block elements on a webpage according to user-specified rules. As evidenced by the extension name, this capability is most often used in service of blocking advertisements, tracking code, or other content deemed annoying or objectionable. Due to its open source nature and large, international user base, AdBlock Plus provides us with a unique resource: a massive, crowd-sourced list of rules that allows us to detect the presence of advertising or tracking assets within a list of URLs and page elements. These rules are compiled in two ``easylists" \cite{easylist} provided on the AdBlock website, with one focused on ad-blocking rules and the other focused on tracker-blocking rules.
+
+Using a similar approach to the one detailed in the last section, we extracted the full URLs of HTTP requests and responses from the OpenWPM crawl database using Python and the sqlite3 library. We then used a modified version of the adblockparser Python module to match the extracted HTTP request and response URLs against the two sets of AdBlock rules mentioned above. The number of positive ad or tracker hits were aggregated by domain, country, and rule set in order to produce summary statistics for use in further analysis.
+
+\section{Results}
+\subsection{Evaluation Metric}
+The goal of our project is to discover the variation of trackers in different countries.  In our experimental design, the independent variable is country. It is a categorical variable with 4 levels if we compare the number of trackers in different countries. If we compare the trackers in different regulation models, the level of the variable is 3 because Japan and the United States both belong to sectoral model. 
+
+There are some dependent variables for further analyses. First, we analyzed the number of third-party cookies and HTTP requests, which is closely related to online trackers. Second, because the number of third-party cookies and HTTP requests are dependent to the number of first-party ones, we looked at the proportion of third-party and first party cookies and HTTP requests to see whether the ratios are identical in different countries. Moreover, the number of first-party cookies or HTTP requests are analyzed because some sites (e.g. google) are both an analytics provider and a service provider, they may use other methods besides third-party cookies to track the information of users. 
+
+Due to the categorical independent variable and quantitative dependent variables, we use one-way ANOVA test for the analyses. There are some assumptions for the test: the distribution of the dependent variables follows a Normal distribution, variances of the  dependent variables are identical, and the error of the dependent variables are independent. We ensure that the independent error assumption is correct because we collected the data by using servers in different countries. However, in order to obtain significant results, we should check whether other two assumptions are also valid when using ANOVA test to analyze the data.  
+
+\subsection{HTTP requests}
+
+\begin{table}[c]
+\centering
+\caption{Number of Third-party HTTP requests}
+\begin{tabular}{|l|r|r|}
+\hline
+\begin{tabular}[c]{@{}l@{}}3rd-party\\ requests\end{tabular} & Mean  & \begin{tabular}[c]{@{}r@{}}Standard \\ Deviation\end{tabular} \\ \hline
+United States                                               & 20.46 & 28.85                                                         \\ \hline
+Japan                                                       & 20.96 & 21.92                                                         \\ \hline
+Germany                                                     & 36.29 & 44.86                                                         \\ \hline
+Australia                                                   & 26.26 & 36.90                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[c]
+\centering
+\caption{Ratio of Third-party and first-party HTTP requests}
+\begin{tabular}{|l|r|r|}
+\hline
+\begin{tabular}[c]{@{}l@{}}ratio of\\ requests\end{tabular} & Mean  & \begin{tabular}[c]{@{}r@{}}Standard \\ Deviation\end{tabular} \\ \hline
+United States                                               & 1.806 & 3.331                                                         \\ \hline
+Japan                                                       & 1.426 & 2.618                                                     \\ \hline
+Germany                                                     & 1.654 & 3.513                                                         \\ \hline
+Australia                                                   & 1.231 & 2.236                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[c]
+\centering
+\caption{Number of First-party HTTP requests}
+\begin{tabular}{|l|r|r|}
+\hline
+\begin{tabular}[c]{@{}l@{}}1st-party\\ requests\end{tabular} & Mean  & \begin{tabular}[c]{@{}r@{}}Standard \\ Deviation\end{tabular} \\ \hline
+United States                                               & 55.63 & 71.77                                                         \\ \hline
+Japan                                                       & 67.63 & 154.78                                                         \\ \hline
+Germany                                                     & 81.25 & 81.89                                                         \\ \hline
+Australia                                                   & 54.30 & 57.13                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+
+Table I, II, and III show mean and standard deviation of number of third party requests, ratio of third and first party requests, and number of first party requests in different countries. We found that the mean value of third-party and first party requests in Germany is more than other countries obviously. Although the mean values for HTTP requests in Germany are higher than other countries, the p-value for these variables are all larger than 0.05, which means the differences between different countries are not significant. Besides, we did not find the difference of the ratio of first and third party requests. 
+
+There are two possible reasons for the result. First, the standard deviation between different countries are not identical. So the assumption of ANOVA test is violated. Second, we have only 25 samples in each country, so the results are easily affected by some outliers. We determined the existence of outliers from the large standard deviation value in these tables. In order to correctly analyze the data, more data is required.
+\subsection{Cookies}
+
+\begin{table}[c]
+\centering
+\caption{Number of Third-party HTTP cookies}
+\begin{tabular}{|l|r|r|}
+\hline
+\begin{tabular}[c]{@{}l@{}}3rd-party\\ cookies\end{tabular} & Mean  & \begin{tabular}[c]{@{}r@{}}Standard \\ Deviation\end{tabular} \\ \hline
+United States                                               & 22.82 & 44.165                                                         \\ \hline
+Japan                                                       & 30.70 & 53.726                                                         \\ \hline
+Germany                                                     & 79.26 & 128.493                                                         \\ \hline
+Australia                                                   & 88.966 & 234.177                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[c]
+\centering
+\caption{Ratio of Third-party and first-party HTTP cookies}
+\begin{tabular}{|l|r|r|}
+\hline
+\begin{tabular}[c]{@{}l@{}}ratio of\\ cookies\end{tabular} & Mean  & \begin{tabular}[c]{@{}r@{}}Standard \\ Deviation\end{tabular} \\ \hline
+United States                                               & 0.651 & 1.476                                                         \\ \hline
+Japan                                                       & 3.003 & 7.726                                                     \\ \hline
+Germany                                                     & 2.327 & 7.678                                                         \\ \hline
+Australia                                                   & 1.258 & 2.330                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[c]
+\centering
+\caption{Number of First-party HTTP cookies}
+\begin{tabular}{|l|r|r|}
+\hline
+\begin{tabular}[c]{@{}l@{}}1st-party\\ requests\end{tabular} & Mean  & \begin{tabular}[c]{@{}r@{}}Standard \\ Deviation\end{tabular} \\ \hline
+United States                                               & 106.14 & 157.091                                                         \\ \hline
+Japan                                                       & 135.00 & 434.499                                                        \\ \hline
+Germany                                                     & 209.78 & 378.571                                                         \\ \hline
+Australia                                                   & 85.35 & 79.622                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+Table IV, V, and VI show mean and standard deviation of number of third party cookies, ratio of third and first party cookies, and number of first party cookies in different countries. We found that the number of third party cookies in Germany and Australia are more than the United States and Japan. However, the standard deviations are still large, so the difference is not significant. 
+
+\subsection{AdBlock rules}
+
+Using our current sample of the top 25 websites from each country, a significant difference was found in the number of hits, both by country and by privacy regulation model. Aggregating across requests and responses, we found a significant difference ($p<0.03$) between countries, with German sites reporting a slightly higher number of tracking/advertisement hits compared to other countries. 
+
+This same trend remained evident after re-running the analysis using a series of dummy variables to represent the presence of different regulatory models. Germany, our representative of the comprehensive model, had a significantly higher ($M=7.89$) number of hits per site, as compared to our mixed ($M=5.16$) or sectoral ($M=5.07$) model countries.
+
+While these results may seem surprising initially, the small sample of sites does not too unlikely that we are getting a skewed view of the landscape. If we are able to obtain data for a larger sample of sites (as mentioned below), significant changes may occur.
+
+\section{Discussion}
+Going into this experiment, we assume that there will be a significant difference in tracking between countries employing the different privacy models. We expect to see the most tracking in the no model and sectoral model countries, less in the co-regulatory model, and even less in the comprehensive model. We are also interested in determining if the country the website is based in, versus the country we are connecting from, plays a role in the amount of tracking. We have a slight expectation that it will, but we really don't know going into the experiment. Whether or not these assumptions have been confirmed is yet to be determined.
+
+At the time of writing this draft, the results are incomplete. We have a script that allows us to collect the top n sites from a specified region utilizing the Alexa.com rankings. We have run tests on all regions except China and Russia for the top 25 websites in each country. After analyzing these results we did not notice anything significant (although there is some debate here) in the results. We are unsure of why this would be the case but we suspect it may have something to do with the small sample size. We will be keeping these results as a benchmark of comparison however. The top 25 websites in each region may not be representative of the region as a whole. In response, we decided to collect the top 250 websites for each region. We are currently analyzing the results for this collection of websites but it is taking a bit longer as the set is much larger.
+
+In addition to the above, we are also going to compare the results for the top 250 websites from each region with the top 500 websites globally. It will be interesting to see how the results compare for these two data sets.
+
+The results of HTTP requests and cookies show that although there are some differences of the number of third party requests and cookies between these countries, they are not significant because their p-values are more than 0.05. In order to obtain further results, we will analyze those data after collecting the data from top 250 websites of each country. Because the number of samples increases, we expect that the equal variance assumption of ANOVA test will be satisfied. If the assumption is then satisfied, we can determine whether the tracking behavior of top sites in these countries are similar. 
+
+\section{Future work}
+Although our study is fairly comprehensive in terms of what we are looking for, we are lacking in a few areas. The most prominent is that we lack a node in China and Russia, and therefore have no direct representation of the no privacy model regions. This directly affects our ability to measure tracking when connecting from these countries. We also cannot analyze China which may be an incredibly interesting case due to their ``Great Firewall" and general views on privacy. Extending our study to incorporate China will be possible soon as AWS EC2 is currently testing Beijing as a regional offering.
+
+It may be valuable to conduct this study again in the future as well. Doing so would allow comparison of tracking throughout time and it may be fruitful to link certain privacy-related events with changes in tracking. For instance, if Do Not Track becomes a widely-accepted standard (like the US government is pushing for), how different will the tracking landscape look? Would tracking increase or decrease for people not utilizing Do Not Track?
+
+Another extension to our study would be to look deeper into other methods of tracking. Third-party cookies, third-party HTTP requests, and ads don't tell the whole story. For example, even though Google has very few third-party cookies or requests, they are probably tracking users more than other websites that have many third-party cookies or requests. In a similar vein, many major service providers like Google are also their own analytics providers. We do not account for this possibility in our study, but developing methods for doing so may reveal a more complete picture.
 
 
 % if have a single appendix:

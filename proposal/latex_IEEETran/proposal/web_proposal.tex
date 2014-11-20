@@ -65,7 +65,8 @@
 % draft mode.
 %
 %\documentclass[journal]{IEEEtran}
-\documentclass[12pt,draft,onecolumn]{IEEEtran}
+%\documentclass[11pt,journal]{IEEEtran}
+\documentclass[11pt,draft,onecolumn]{IEEEtran}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -641,7 +642,9 @@ Web measurement studies are considered challenging for two reasons: causality an
 \item 12/12: Final paper.
 \end{enumerate}
 
+The next step is to collect the number of cookies and HTTP requests in the database file. They are stored in two different tables: cookies and http\_requests. We extracted the hyperlinks of cookies and HTTP requests from these two tables by using sqlite3 library in Python. In order to further analyze first-party and third-party cookies and HTTP requests, we set a rule to determine whether the hyperlink in a record is related to the website where the record is extracted. To be more specific, if a hyperlink contains the domain name of the extracted website, it is a first-party cookie or HTTP request; otherwise, it is a third-party one. For example, if a cookie extracted from www.amazon.de/ with the hyperlink fls-eu.amazon.de, it is a first-party cookie because the hyperlink contains the string ?amazon?. In contrast, if a cookie also extracted from amazon with the hyperlink zanox.com, it is a third-party cookie because it does not contain ?amazon?. By implementing these procedures, we can use statistical tools to analyze the collected data.
 
+The goal of our project is to discover the variation of trackers in different countries.  In our experimental design, the independent variable is country. It is a categorical variable with 4 levels if we compare the number of trackers in different countries. If we compare the trackers in different regulation models, the level of the variable is 3 because Japan and the United States both belong to sectoral model. 
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
