@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.2)  20 NOV 2014 00:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.2)  20 NOV 2014 00:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**web_proposal.tex
-(./web_proposal.tex
+**web_draftpaper.tex
+(./web_draftpaper.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (./IEEEtran.cls
@@ -88,8 +88,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count91
 \@IEEEtranrubishbin=\box26
-) (./web_proposal.aux)
-\openout1 = `web_proposal.aux'.
+) (./web_draftpaper.aux)
+\openout1 = `web_draftpaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 371.
 LaTeX Font Info:    ... okay on input line 371.
@@ -126,7 +126,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 726.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 726.
- [7] [8] (./web_proposal.bbl
+ [7] [8] (./web_draftpaper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 19--22
 []\OT1/ptm/m/n/9 J. Mar-shall, ``Face-book Ex-tends Reach With New Ad-ver-tis-i
 ng Plat-form. [on-line]. avail-able:
@@ -150,23 +150,23 @@ Overfull \hbox (22.96707pt too wide) in paragraph at lines 71--73
 e]. avail-able: https://github.com/mitmproxy/mitmproxy/issues/211.'' 
  []
 
-) [9] [10] [11] (./web_proposal.aux) ) 
+) [9] [10] [11] (./web_draftpaper.aux) ) 
 Here is how much of TeX's memory you used:
  972 strings out of 493117
- 16774 string characters out of 6135434
+ 16796 string characters out of 6135434
  80743 words of memory out of 5000000
  4489 multiletter control sequences out of 15000+600000
  38754 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 26i,13n,19p,1065b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts
-/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/ut
-mr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on web_proposal.pdf (11 pages, 82803 bytes).
+ 26i,13n,19p,1067b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fon
+ts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on web_draftpaper.pdf (11 pages, 82803 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
