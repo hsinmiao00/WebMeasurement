@@ -1,3 +1,7 @@
 venv
 
 *.pyc
+
+*.jmp
+
+top250_dbs
