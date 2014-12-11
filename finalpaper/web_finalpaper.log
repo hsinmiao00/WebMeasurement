@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.2)  30 NOV 2014 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.2)  11 DEC 2014 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**web_draftpaper.tex
-(./web_draftpaper.tex
+**web_finalpaper.tex
+(./web_finalpaper.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (./IEEEtran.cls
@@ -92,8 +92,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count91
 \@IEEEtranrubishbin=\box26
-) (./web_draftpaper.aux)
-\openout1 = `web_draftpaper.aux'.
+) (./web_finalpaper.aux)
+\openout1 = `web_finalpaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 371.
 LaTeX Font Info:    ... okay on input line 371.
@@ -120,15 +120,31 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <11> not available
 
 ] [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 639.
+(Font)              <8> on input line 659.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 639.
+(Font)              <6> on input line 659.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 639.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 726.
- [3]
-(./web_draftpaper.bbl
+(Font)              <5> on input line 659.
+
+Overfull \hbox (37.85413pt too wide) in paragraph at lines 675--679
+ [][] 
+ []
+
+
+Overfull \hbox (368.11554pt too wide) in paragraph at lines 697--704
+ [][] 
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 725.
+
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 725.
+ [4]
+(./web_finalpaper.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 9--11
 []\OT1/ptm/m/n/8 Alexa, ``The top 500 sites on the web. [on-line]. avail-able:
  []
@@ -162,34 +178,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 []\OT1/ptm/m/n/8 ``Regional Avail-abil-ity of AWS EC2. [on-line]. avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 \OT1/ptm/m/n/8 http://aws.amazon.com/about-aws/global-infrastructure/regional-
  []
 
-[4]) [5
 
-] (./web_draftpaper.aux) ) 
+Underfull \hbox (badness 4291) in paragraph at lines 74--76
+[]\OT1/ptm/m/n/8 Scrapinghub, ``Ad-block-parser python mod-ule. [on-line]. avai
+l-able:
+ []
+
+) [5] (./web_finalpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 966 strings out of 493117
- 16755 string characters out of 6135434
- 82493 words of memory out of 5000000
- 4488 multiletter control sequences out of 15000+600000
- 40103 words of font info for 75 fonts, out of 8000000 for 9000
+ 987 strings out of 493117
+ 17100 string characters out of 6135434
+ 77493 words of memory out of 5000000
+ 4503 multiletter control sequences out of 15000+600000
+ 43413 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,13n,19p,1067b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on web_draftpaper.pdf (5 pages, 87798 bytes).
+ 27i,8n,19p,1094b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on web_finalpaper.pdf (5 pages, 96493 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream

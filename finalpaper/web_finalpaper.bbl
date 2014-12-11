@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+
+\bibitem{IAPPbook}
+{Peter P. Swire and Kenesa Ahmad}, {\em {Foundations of Information Privacy and
+  Data Protection: A Survey of Global Concepts, Laws and Practices}}.
+\newblock IAPP, 2012.
+
+\bibitem{Alexa}
+Alexa, ``{The top 500 sites on the web. [online]. available:
+  http://www.alexa.com/topsites}.''
+
+\bibitem{adblock}
+``{Adblock Plus. [online]. available: https://adblockplus.org/en/about}.''
+
+\bibitem{openwpm}
+OpenWPM, ``{OpenWPM. [online]. available: https://github.com/citp/OpenWPM}.''
+
+\bibitem{wsj_fb}
+J.~Marshall, ``{Facebook Extends Reach With New Advertising Platform. [online].
+  available:
+  http://online.wsj.com/articles/facebook-extends-reach-withad-platform-1411428726}.''
+
+\bibitem{Google_EU_marketingland}
+G.~Sterling, ``{EU Seeking Numerous Google Privacy Disclosures, Policy Changes.
+  [online]. available:
+  http://marketingland.com/consent-google-analytics-one-many-privacy-changes-sought-europe-101495}.''
+
+\bibitem{Mayer_Mitchell}
+{Mayer, J.R. and Mitchell, J.C.}, ``{Third-Party Web Tracking: Policy and
+  Technology},'' {\em {Security and Privacy (SP), 2012 IEEE Symposium on}},
+  2012.
+
+\bibitem{openwpm_article}
+{Steven Englehardt, Christian Eubank, Peter Zimmerman, Dillon Reisman, Arvind
+  Narayanan}, ``{Web Privacy Measurement: Scientific principles, engineering
+  platform, and new results},'' {\em Manuscript}, 2014.
+
+\bibitem{jang}
+{Jang, Dongseok and Jhala, Ranjit and Lerner, Sorin and Shacham, Hovav}, ``{An
+  empirical study of privacy-violating information flows in JavaScript web
+  applications},'' {\em {Proceedings of the 17th ACM Conference on Computer and
+  Communications Security}}, 2010.
+
+\bibitem{hannak}
+{Hannak, Aniko and Sapiezynski, Piotr and Molavi Kakhki, Arash and
+  Krishnamurthy, Balachander and Lazer, David and Mislove, Alan and Wilson,
+  Christo}, ``{Measuring Personalization of Web Search},'' {\em {Proceedings of
+  the 22Nd International Conference on World Wide Web}}, 2013.
+
+\bibitem{sweeney}
+L.~Sweeney, ``{Discrimination in Online Ad Delivery},'' {\em Queue}, 2013.
+
+\bibitem{balebako}
+{Rebecca Balebako, Pedro G. Leon, Richard Shay, Blase Ur, Yang Wang, Lorrie
+  Faith Cranor}, ``{Measuring the effectiveness of privacy tools for limiting
+  behavioral advertising},'' {\em {In Web 2.0 Workshop on Security and
+  Privacy}}, 2012.
+
+\bibitem{connolly}
+{Chris Connolly}, ``{The US Safe Harbor - Fact or Fiction? [online]. available:
+  http://www.galexia.com/public/research/articles/research\_articles-pa08.html}.''
+
+\bibitem{Selenium}
+SeleniumHQ, ``{SeleniumHQ. [online]. available: http://www.seleniumhq.org/}.''
+
+\bibitem{amazonregion}
+``{Regional Availability of AWS EC2. [online]. available:
+  http://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/}.''
+
+\bibitem{easylist}
+``{Easylist. [online]. available: https://easylist.adblockplus.org}.''
+
+\bibitem{adblockparser}
+Scrapinghub, ``{Adblockparser python module. [online]. available:
+  https://github.com/scrapinghub/adblockparser}.''
+
+\end{thebibliography}
