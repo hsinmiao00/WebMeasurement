@@ -26,9 +26,14 @@ G.~Sterling, ``{EU Seeking Numerous Google Privacy Disclosures, Policy Changes.
   http://marketingland.com/consent-google-analytics-one-many-privacy-changes-sought-europe-101495}.''
 
 \bibitem{Mayer_Mitchell}
-{Mayer, J.R. and Mitchell, J.C.}, ``{Third-Party Web Tracking: Policy and
-  Technology},'' {\em {Security and Privacy (SP), 2012 IEEE Symposium on}},
+{Jonathan R. Mayer and John C. Mitchell}, ``{Third-Party Web Tracking: Policy
+  and Technology},'' {\em {Security and Privacy (SP), 2012 IEEE Symposium on}},
   2012.
+
+\bibitem{Krishnamurthy}
+{Krishnamurthy, Balachander and Wills, Craig}, ``{Privacy Diffusion on the Web:
+  A Longitudinal Perspective},'' {\em {Proceedings of the 18th International
+  Conference on World Wide Web}}, 2009.
 
 \bibitem{openwpm_article}
 {Steven Englehardt, Christian Eubank, Peter Zimmerman, Dillon Reisman, Arvind
@@ -45,7 +50,7 @@ G.~Sterling, ``{EU Seeking Numerous Google Privacy Disclosures, Policy Changes.
 {Hannak, Aniko and Sapiezynski, Piotr and Molavi Kakhki, Arash and
   Krishnamurthy, Balachander and Lazer, David and Mislove, Alan and Wilson,
   Christo}, ``{Measuring Personalization of Web Search},'' {\em {Proceedings of
-  the 22Nd International Conference on World Wide Web}}, 2013.
+  the 22nd International Conference on World Wide Web}}, 2013.
 
 \bibitem{sweeney}
 L.~Sweeney, ``{Discrimination in Online Ad Delivery},'' {\em Queue}, 2013.
@@ -58,7 +63,8 @@ L.~Sweeney, ``{Discrimination in Online Ad Delivery},'' {\em Queue}, 2013.
 
 \bibitem{connolly}
 {Chris Connolly}, ``{The US Safe Harbor - Fact or Fiction? [online]. available:
-  http://www.galexia.com/public/research/articles/research\_articles-pa08.html}.''
+  http://www.galexia.com/public/research/articles/research\_articles-pa08.html},''
+  {\em Galexia}, 2008.
 
 \bibitem{Selenium}
 SeleniumHQ, ``{SeleniumHQ. [online]. available: http://www.seleniumhq.org/}.''
@@ -73,5 +79,19 @@ SeleniumHQ, ``{SeleniumHQ. [online]. available: http://www.seleniumhq.org/}.''
 \bibitem{adblockparser}
 Scrapinghub, ``{Adblockparser python module. [online]. available:
   https://github.com/scrapinghub/adblockparser}.''
+
+\bibitem{torsocks5}
+C.~Hansen, ``{How to use Tor as a Socks5 proxy. [online]. available:
+  http://www.deepdotweb.com/2014/05/23/use-tor-socks5-proxy/}.''
+
+\bibitem{MITM}
+``{Bug Report: Issues with MITMProxy and upstream SOCKS proxies. [online].
+  available: https://github.com/mitmproxy/mitmproxy/issues/211}.''
+
+\bibitem{toor}
+{Amar Toor}, ``{How Putin's cronies seized control of Russia's Facebook.
+  [online]. available:
+  http://www.theverge.com/2014/1/31/5363990/how-putins-cronies-seized-control-over-russias-facebook-pavel-durov-vk},''
+  {\em {The Verge}}, 2014.
 
 \end{thebibliography}
