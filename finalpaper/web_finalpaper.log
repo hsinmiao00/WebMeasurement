@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.2)  11 DEC 2014 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.9.2)  11 DEC 2014 19:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -120,31 +120,32 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <11> not available
 
 ] [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 661.
+(Font)              <7> on input line 647.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 661.
+(Font)              <5> on input line 647.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 661.
+(Font)              <8> on input line 653.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 653.
+ [3]
 
-Overfull \hbox (37.85413pt too wide) in paragraph at lines 677--681
- [][] 
- []
+LaTeX Warning: Reference `pairwise500' on page 4 undefined on input line 751.
 
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 760.
 
-Overfull \hbox (368.11554pt too wide) in paragraph at lines 699--706
- [][] 
- []
-
-[3]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 727.
-
- (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 727.
- [4]
-(./web_finalpaper.bbl
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 760.
+
+
+LaTeX Warning: Reference `pairwise500' on page 4 undefined on input line 772.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] (./web_finalpaper.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 9--11
 []\OT1/ptm/m/n/8 Alexa, ``The top 500 sites on the web. [on-line]. avail-able:
  []
@@ -166,7 +167,7 @@ Underfull \hbox (badness 1975) in paragraph at lines 19--22
 /facebook-
  []
 
-
+[5]
 Underfull \hbox (badness 2717) in paragraph at lines 65--68
 \OT1/ptm/m/n/8 able: http://www.galexia.com/public/research/articles/research[]
 articles-
@@ -215,26 +216,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--96
 vk,''
  []
 
-) [5] (./web_finalpaper.aux) ) 
+) [6
+
+] (./web_finalpaper.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 991 strings out of 493117
- 17138 string characters out of 6135434
- 77493 words of memory out of 5000000
- 4507 multiletter control sequences out of 15000+600000
- 43413 words of font info for 78 fonts, out of 8000000 for 9000
+ 996 strings out of 493117
+ 17195 string characters out of 6135434
+ 82493 words of memory out of 5000000
+ 4511 multiletter control sequences out of 15000+600000
+ 44520 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,8n,19p,1088b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvi
-ps/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on web_finalpaper.pdf (5 pages, 98541 bytes).
+ 27i,14n,19p,1088b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts
+/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on web_finalpaper.pdf (6 pages, 132644 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

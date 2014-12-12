@@ -599,7 +599,7 @@ In the following sections, we will first review some related literatures. Detail
 Privacy in the news seems inescapable; a general concern regarding the intrusiveness and pervasiveness of online tracking, advertising, monitoring has caught the public attention. For example, concerns over the activities of social networking sites and advertisers such as Facebook \cite{wsj_fb} bring up issues of anonymity and tracking in daily life. Similarly, the level of privacy protection put into place by industry giants such as Google has come under scrutiny \cite{Google_EU_marketingland} as jurisdictions with more comprehensive privacy regulations have called the effectiveness of their protections into question.
 
 These worries also demonstrate the large amount of change that the Internet has undergone in a relatively short amount of time. As Mayer and Mitchell note \cite{Mayer_Mitchell}, individual instances of web content have evolved from a single-origin affair into a conglomeration of  ``myriad unrelated  `third-party' websites," each facilitating anything from advertising to social media. 
-This has been demonstrated by Krishnamurthy and Wills \cite{Krishnamurthy} in their longitudinal study, demonstrating what they term an ?increasing aggregation of user-related data by a steadily decreasing number of entities.?
+This has been demonstrated by Krishnamurthy and Wills \cite{Krishnamurthy} in their longitudinal study, demonstrating what they term an ``increasing aggregation of user-related data by a steadily decreasing number of entities."
 Furthermore, this explosion of third parties has existed an environment with little to no regulation until very recently \cite{Mayer_Mitchell}, with advances only occurring in the comprehensive regulatory environment provided by the European Union.  
 
 \subsection{Privacy-related Web Measurement}
@@ -618,7 +618,7 @@ To source an internet connection point at various locations, we used Amazon Web 
 \subsection{OpenWPM}
 
 
-Our next step was to collect data on a number of metrics related to tracking, including the number of cookies and HTTP requests. Engelhardt et al.?s OpenWPM platform is a purpose-built web measurement platform that logs a large amount of web session data in a standardized SQLite database format, making this study a perfect environment in which to use the platform. We utilized the most recent publicly available version of OpenWPM for the data collection portion of our study and used the platform?s API to programmatically crawl a list of the top 250 websites as defined by Alexa \cite{Alexa}. OpenWPM?s Firefox backend was used for the crawl with both JavaScript and Flash enabled.
+Our next step was to collect data on a number of metrics related to tracking, including the number of cookies and HTTP requests. Engelhardt et al.'s OpenWPM platform is a purpose-built web measurement platform that logs a large amount of web session data in a standardized SQLite database format, making this study a perfect environment in which to use the platform. We utilized the most recent publicly available version of OpenWPM for the data collection portion of our study and used the platform's API to programmatically crawl a list of the top 250 websites as defined by Alexa \cite{Alexa}. OpenWPM's Firefox backend was used for the crawl with both JavaScript and Flash enabled.
 
 
 \subsection{Third-party HTTP requests and cookies}
@@ -644,12 +644,41 @@ Due to the categorical independent variable and quantitative dependent variables
 
 \subsection{Third-party HTTP requests}
 We compared the number of third-party HTTP domain requests among different countries. 
-Table ? shows the average rank for each country in Kruskal-Wallis test. We found that the difference of the numbers of third-party domain of HTTP requests among our four countries are significant (?2 = 43.863; df = 3; p < 0.0005). We also found that there are more third-party HTTP requests in the US compared to Germany and Australia (?2 =10.752, df=1, p=0.001). The differences between Germany and Australia were not significant. Moreover, there were more third-party HTTP requests in Germany and Australia compared to Japan (?2 =39.709, df=1, p<0.0005).
+Table \ref{thirdHTTP} shows the average rank for each country in Kruskal-Wallis test. We found that the difference of the numbers of third-party domain of HTTP requests among our four countries are significant ($\chi^{2} = 43.863; df = 3; p < 0.0005$). We also found that there are more third-party HTTP requests in the US compared to Germany and Australia ($\chi^{2} =10.752; df=1; p=0.001$). The differences between Germany and Australia were not significant. Moreover, there were more third-party HTTP requests in Germany and Australia compared to Japan ($\chi^{2} =39.709; df=1; p<0.0005$).
+
+\begin{table}[t]
+\centering
+\caption{Rank of the number of third-party HTTP domain requests among different countries in Kruskal-Wallis test.}
+\label{thirdHTTP}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{country} & \textbf{Rank} \\ \hline
+AU               & 511.79        \\ \hline
+DE               & 492.52        \\ \hline
+JP               & 406.69        \\ \hline
+US               & 575.00        \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{Cookies}
 We also compared the number of third-party and first party cookies among different countries. 
-Table ? shows the average rank of number of third-party cookies for each country in Kruskal-Wallis test. The results show that although the difference of numbers of first-party cookies is not significant, the difference of number of third-party cookies is significant (?2=13.147; df=2; p=0.004).
-We found similar results compared to the number of domains in third-party HTTP requests. There are more third-party cookies in the US compared to Germany (?2 = 4.111; df = 1; p = 0.043) and Australia. Also, the difference between Germany, Australia, and Japan is not significant.
+Table \ref{thirdcookie} shows the average rank of number of third-party cookies for each country in Kruskal-Wallis test. The results show that although the difference of numbers of first-party cookies is not significant, the difference of number of third-party cookies is significant ($\chi^{2}=13.147; df=2; p=0.004$).
+We found similar results compared to the number of domains in third-party HTTP requests. There are more third-party cookies in the US compared to Germany ($\chi^{2} = 4.111; df=1; p=0.043$) and Australia. Also, the difference between Germany, Australia, and Japan is not significant.
+
+\begin{table}[t]
+\centering
+\caption{Rank of the number of third-party cookies among different countries in Kruskal-Wallis test.}
+\label{thirdcookie}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{country} & \textbf{Rank} \\ \hline
+AU               & 438.53        \\ \hline
+DE               & 445.51        \\ \hline
+JP               & 411.91        \\ \hline
+US               & 499.14        \\ \hline
+\end{tabular}
+\end{table}
+
 
 \subsection{Correlation between HTTP requests and cookies}
 Table \ref{correlation} shows the correlation between the number of third-party domain for HTTP requests and third-party cookies. We found that in these countries these two variables are strongly correlated, providing an indicator for the validity of the measure.
@@ -658,80 +687,104 @@ Table \ref{correlation} shows the correlation between the number of third-party 
 \centering
 \caption{Correlation between HTTP requests and cookies}
 \label{correlation}
-\begin{tabular}{ll}
-\textbf{Country} & \textbf{r} \\
-AU               & 0.691      \\
-DE               & 0.634      \\
-JP               & 0.778      \\
-US               & 0.715     
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Country} & \textbf{r} \\ \hline
+AU               & 0.691      \\ \hline
+DE               & 0.634      \\ \hline
+JP               & 0.778      \\ \hline
+US               & 0.715   \\  \hline
 \end{tabular}
 \end{table}
 
 
 \subsection{Metric: AdBlock rules}
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \caption{Summary Statistics For All Tracking-Related HTTP Requests}
 \label{summaryTracking}
-\begin{tabular}{|l|l|ll}
-\textbf{N} & \textbf{Mean Requests (SD)} & \textbf{Mean Hits (SD)} & \textbf{Mean Proportion Hits (SD)} \\ \
-1931       & 111 (116)                   & 6.54 (7.7)              & 0.06 (0.05)                        \\ 
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{N} & \textbf{Mean Requests (SD)} & \textbf{Mean Hits (SD)} & \textbf{Mean Proportion Hits (SD)} \\ \hline
+1931       & 111 (116)                   & 6.54 (7.7)              & 0.06 (0.05)                        \\ \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 
 \subsubsection{Origin-dependent tracking activity }
 
 One crucial phenomenon to test for is the presence of origin-dependent tracking activity, something that we will term geographic tracker churn for short. The essence of the question is simple: if user A visits example.com from country A and user B also visits example.com at the same time, but from country B, will they receive the same type and number of trackers? Evaluating the presence of this churn for several reasons. First, the presence or absence of the churn will help us determine how heavily geographic factors need to be controlled for in this (and other) studies. Second, the presence of churn could indicate interesting, adaptive behavior by tracking companies that could warrant further investigation.
 
-To this end, we crawled Alexa?s list of the top 500 global sites from all four of our server locations at identical times and compared matches against Adblock?s tracking EasyList. Controlling for outliers (mean +/- 3 s.d.), nonparametric tests of both the absolute number of hits by country and the proportions of hits by country show no significant difference (n hits: ?2=0.805; df=3; p>0.84, proportion: ?2=0.172; df=3; p>0.98). Because of this, we can conclude that geographic tracker churn will not be a significant factor for us within the scope of our experiment.
+To this end, we crawled Alexa's list of the top 500 global sites from all four of our server locations at identical times and compared matches against Adblock's tracking EasyList. Controlling for outliers (mean +/- 3 s.d.), nonparametric tests of both the absolute number of hits by country and the proportions of hits by country show no significant difference (n hits: $\chi^{2}=0.805; df=3; p>0.84$, proportion: $\chi^{2}=0.172; df=3; p>0.98$). Because of this, we can conclude that geographic tracker churn will not be a significant factor for us within the scope of our experiment.
 
 \subsubsection{More trackers than ads}
-However, there were significant differences in type of hit (trackers vs. advertisements) within the same top 500 sites. The proportion of requests associated with trackers was significantly higher than the proportion associated with advertisements (?2=45.1; p<0.0001). A pairwise comparison across the top 500 sites showed that trackers accounted for approximately 2\% more requests than advertisements (95\% CI [0.015, 0.021]). This is significant considering the overall proportion of requests for both ads and trackers is 5.4\% (SEMean = 0.0009, 95\% CI [0.052, 0.056]).
+However, there were significant differences in type of hit (trackers vs. advertisements) within the same top 500 sites. The proportion of requests associated with trackers was significantly higher than the proportion associated with advertisements ($\chi^{2}=45.1; p<0.0001$). A pairwise comparison across the top 500 sites showed that trackers accounted for approximately 2\% more requests than advertisements ($95\% CI [0.015, 0.021]$). This is significant considering the overall proportion of requests for both ads and trackers is 5.4\% ($SEMean = 0.0009, 95\% CI [0.052, 0.056]$).
 
 \subsubsection{Differences by country}
 
-\begin{table}
+\begin{table*}
 \centering
 \caption{Summary Statistics By Country For Tracking-Related HTTP Requests}
 \label{trackingbycountry}
-   \begin{tabular}{llllllll}
-    Country & N Rows & Mean(Number\_Requests) & Mean(Number\_Hits) & Mean(Proportion\_hits) & Std Dev(Number\_Requests) & Std Dev(Number\_Hits) & Std Dev(Proportion\_hits) \\
-   AU       & 494    & 99.19                  & 6.83               & 0.06                   & 80.70                     & 7.0                   & 0.05                      \\
-   DE       & 492    & 121.04                 & 5.70               & 0.05                   & 160.74                    & 6.31                  & 0.05                      \\
-   JP       & 451    & 103.15                 & 4.10               & 0.05                   & 101.64                    & 4.82                  & 0.05                      \\
-   US       & 494    & 120.59                 & 9.34               & 0.08                   & 105.10                    & 10.41                 & 0.05                      \\
+   \begin{tabular}{|l|l|l|l|l|l|l|}
+   \hline
+    \textbf{Country}  & \textbf{\begin{tabular}[c]{@{}l@{}}Mean\\ (Number\_Requests)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Mean\\ (Number\_Hits)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Mean\\ (Proportion\_hits)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Std Dev\\ (Number\_Requests)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Std Dev\\ (Number\_Hits)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Std Dev\\ (Proportion\_hits)\end{tabular}} \\ \hline
+   AU           & 99.19                  & 6.83               & 0.06                   & 80.70                     & 7.0                   & 0.05                      \\ \hline
+   DE           & 121.04                 & 5.70               & 0.05                   & 160.74                    & 6.31                  & 0.05                      \\ \hline
+   JP           & 103.15                 & 4.10               & 0.05                   & 101.64                    & 4.82                  & 0.05                      \\ \hline
+   US           & 120.59                 & 9.34               & 0.08                   & 105.10                    & 10.41                 & 0.05                      \\ \hline
    \end{tabular}
-\end{table}
+\end{table*}
 
 
 
-While we couldn?t draw conclusions about the models themselves, we do find interesting results when examining each individual country in a series of pairwise comparisons between the top 250 sites in each country.  Differences in the proportion of total HTTP requests associated with trackers differs significantly and may imply the presence of significant variation beyond what can be explained on the country or model level.
+While we couldn't draw conclusions about the models themselves, we do find interesting results when examining each individual country in a series of pairwise comparisons between the top 250 sites in each country.  Differences in the proportion of total HTTP requests associated with trackers differs significantly and may imply the presence of significant variation beyond what can be explained on the country or model level.
 
 \subsubsection{More tracking-related requests in the United States}
-A pairwise examination of the proportion of HTTP requests related to tracking activity (operationalized as the proportion of requests that matched an Adblock rule) show that United States has significantly more tracking activity compared to all of our other countries. While the differences varied by country, each comparison showed a significantly greater (at least p<0.02) percentage of tracking requests, ranging from less than 1\% (US-AU) to more than 3\% (US-JP). Table ? displays these pairwise tests, along with confidence intervals, in more detail.
+A pairwise examination of the proportion of HTTP requests related to tracking activity (operationalized as the proportion of requests that matched an Adblock rule) show that United States has significantly more tracking activity compared to all of our other countries. While the differences varied by country, each comparison showed a significantly greater (at least $p<0.02$) percentage of tracking requests, ranging from less than 1\% (US-AU) to more than 3\% (US-JP). Table \ref{pairwise} displays these pairwise tests, along with confidence intervals, in more detail.
 
 \subsubsection{Differences within the sectoral model}
-It is especially interesting to note the comparisons between our two sectoral model countries, the United States and Japan. Even though they ostensibly have the same regulatory model, the United States showed a significantly greater (all p<0.02) amount of tracking-related HTTP requests?anywhere from 2.8\% to 4\% more. Considering the average number of requests per page is over 100 (see table ?), even a 4\% increase in tracking-related requests could indicate the loading of 4 to 5 more tracking elements or scripts.
+It is especially interesting to note the comparisons between our two sectoral model countries, the United States and Japan. Even though they ostensibly have the same regulatory model, the United States showed a significantly greater (all $p<0.02$) amount of tracking-related HTTP requests?anywhere from 2.8\% to 4\% more. Considering the average number of requests per page is over 100 (see table ?), even a 4\% increase in tracking-related requests could indicate the loading of 4 to 5 more tracking elements or scripts.
 
 \subsubsection{Does origin matter?}
-When this current data set, based on the top 250 sites from each country, is compared to the top 500 global sites data set used earlier, an interesting possibility presents itself. Looking at the series of pairwise comparisons for the top 500 sites (see Table ?), none of the differences between countries are significant (all p>0.71). This indicates that it may be the website?s country origin, not the user?s, that matters in terms of tracking activity present. However, there may be other factors that account for this difference in variation, something that will be expanded on in our discussion below.
+When this current data set, based on the top 250 sites from each country, is compared to the top 500 global sites data set used earlier, an interesting possibility presents itself. Looking at the series of pairwise comparisons for the top 500 sites (see Table \ref{pairwise500}), none of the differences between countries are significant (all $p>0.71$). This indicates that it may be the website's country origin, not the user's, that matters in terms of tracking activity present. However, there may be other factors that account for this difference in variation, something that will be expanded on in our discussion below.
 
 \begin{table}[t]
 \centering
 \caption{Pairwise Comparisons Between Countries for Tracking Hits}
 \label{pairwise}
-\begin{tabular}{lllll}
-Country A & Country B & Z     & p              & 95\% CI For Change   \\
-US        & JP        & 10.42 & \textless.0001 & {[}0.028, 0.040{]}   \\
-US        & DE        & 7.77  & \textless.0001 & {[}0.018, 0.031{]}   \\
-US        & AU        & 2.57  & \textless.02   & {[}0.001, 0.014{]}   \\
-JP        & DE        & -3.64 & \textless.0005 & {[}-0.013, -0.002{]} \\
-DE        & AU        & -5.29 & \textless.0001 & {[}-0.021, -0.009{]} \\
-AU        & AU        & -8.33 & \textless.0001 & {[}-0.031, -0.019{]}
+\begin{tabular}{|l|l|l|l|l|}
+   \hline
+\textbf{Country A} & \textbf{Country B} & \textbf{Z}     & \textbf{p}              & 9\textbf{5\% CI For Change}   \\    \hline
+US        & JP        & 10.42 & \textless.0001 & {[}0.028, 0.040{]}   \\   \hline
+US        & DE        & 7.77  & \textless.0001 & {[}0.018, 0.031{]}   \\   \hline
+US        & AU        & 2.57  & \textless.02   & {[}0.001, 0.014{]}   \\   \hline
+JP        & DE        & -3.64 & \textless.0005 & {[}-0.013, -0.002{]} \\   \hline
+DE        & AU        & -5.29 & \textless.0001 & {[}-0.021, -0.009{]} \\   \hline
+AU        & AU        & -8.33 & \textless.0001 & {[}-0.031, -0.019{]}\\   \hline
 \end{tabular}
 \end{table}
+
+\begin{table}[h]
+\centering
+\caption{Pairwise Comparisons Between Countries for Top 500 Global Sites.}
+\ref{pairwise500}
+\begin{tabular}{llll}
+\multicolumn{1}{r}{\textbf{Pairwise}} & \multicolumn{1}{r}{\textbf{}} & \multicolumn{1}{r}{\textbf{}} & \multicolumn{1}{r}{\textbf{}} \\
+\textbf{}                             & \textbf{Country A}            & \textbf{Country B}            & \textbf{p}                    \\
+                                      & JP                            & DE                            & 0.855                         \\
+                                      & JP                            & AU                            & 0.963                         \\
+                                      & US                            & DE                            & 0.859                         \\
+                                      & DE                            & AU                            & 0.838                         \\
+                                      & US                            & JP                            & 0.739                         \\
+                                      & US                            & AU                            & 0.714                         \\
+\textbf{Overall}                      & \textbf{}                     & \textbf{}                     & \textbf{}                     \\
+\textbf{}                             & \textbf{?2}                   & \textbf{df}                   & \textbf{p}                    \\
+                                      & 0.177                         & 3                             & 0.981                        
+\end{tabular}
+\end{table}
+
 
 
 \section{Discussion}
@@ -742,16 +795,16 @@ Outliers
 We are also interested in outliers about tracking behaviors in the websites. In the US, nydailynews.com has the most number of third-party cookies in top 250 websites. There are 6,546 third-party cookies in that website. Other news websites including foxnews.com, sfgate.com, drudgereport.com and nypost.com all have more than 900 third-party cookies. We found that news websites also play important roles of third-party cookies in Japan and Australia. theaustralian.com.au has 1,819 third-party cookies on its website, which is the third most in top 250 websites. In addition, in Japan, reuters.com has 1,827 third-party cookies, which is the most in top 250 websites.  In contrast, websites with the most numbers of third-party cookies are not news websites. The finding is interesting because it implies that news websites rely on third-party cookies heavily in the US, Japan, and Australia. However in Germany, the tracking behaviors are not similar to other three countries because most of third-party cookies are in shopping websites instead of news websites.  
 
 Other factors 
-Currently, we do not have enough data to conclusively say whether the different privacy regulatory models are actually statistically different from one another in practice. The reason for this is that our sample size isn?t large enough to provide a good representation. Something we did find evidence of though is that regulatory model may not indicate the level of technological privacy users get. We noticed that the US had many more tracking indicators than Japan overall yet they both follow the sectoral model. We are unsure of exactly why this is the case but we suspect that it may be due to cultural differences or perhaps the types of websites that are popular. It could be the case that the popular sites in Japan fall under a particular sector that is more regulated than those in the US. Another possibility is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan which could lead to the difference in tracking we saw.
+Currently, we do not have enough data to conclusively say whether the different privacy regulatory models are actually statistically different from one another in practice. The reason for this is that our sample size isn't large enough to provide a good representation. Something we did find evidence of though is that regulatory model may not indicate the level of technological privacy users get. We noticed that the US had many more tracking indicators than Japan overall yet they both follow the sectoral model. We are unsure of exactly why this is the case but we suspect that it may be due to cultural differences or perhaps the types of websites that are popular. It could be the case that the popular sites in Japan fall under a particular sector that is more regulated than those in the US. Another possibility is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan which could lead to the difference in tracking we saw.
 
 Future work
-Although our study is fairly comprehensive in terms of what we are looking for, we are lacking in a few areas. The most prominent is that we lack a node in China and Russia, and therefore have no direct representation of the no privacy model regions. We initially thought that this would directly affect our ability to measure tracking properly but our results have shown that where we connect to a particular website from may have very little to do with tracking. This result is based on a small sample (just the US and Japan) so we would also like to verify this fact over a longer period of time and with more countries prior to making a concrete conclusion. China may be an exception to this finding since they have the ?Great Firewall of China? in place which may distort our results. We are unsure of how much different the internet is inside and outside of China?s firewall. 
+Although our study is fairly comprehensive in terms of what we are looking for, we are lacking in a few areas. The most prominent is that we lack a node in China and Russia, and therefore have no direct representation of the no privacy model regions. We initially thought that this would directly affect our ability to measure tracking properly but our results have shown that where we connect to a particular website from may have very little to do with tracking. This result is based on a small sample (just the US and Japan) so we would also like to verify this fact over a longer period of time and with more countries prior to making a concrete conclusion. China may be an exception to this finding since they have the ``Great Firewall of China" in place which may distort our results. We are unsure of how much different the internet is inside and outside of China's firewall. 
 
-Russia is another interesting case and doesn?t have the complication of a national firewall. Russia?s government has been taking an increasingly aggressive interest in the internet, recently going so far as commandeering the Vkontakte, the `Facebook of Russia' \cite{toor}. Extending our study to incorporate these two countries seems very promising since it could yield results that are very different from what we have seen in our current study. In the case of China, AWS EC2 is currently in open beta (for Chinese residents only) for nodes in Beijing so setting up a node there will be possible in the near future. This would also give us the ability to measure and compare tracking in China from inside and outside the firewall.
+Russia is another interesting case and doesn't have the complication of a national firewall. Russia's government has been taking an increasingly aggressive interest in the internet, recently going so far as commandeering the Vkontakte, the `Facebook of Russia' \cite{toor}. Extending our study to incorporate these two countries seems very promising since it could yield results that are very different from what we have seen in our current study. In the case of China, AWS EC2 is currently in open beta (for Chinese residents only) for nodes in Beijing so setting up a node there will be possible in the near future. This would also give us the ability to measure and compare tracking in China from inside and outside the firewall.
 
 It may be valuable to conduct this study again in the future as well. Doing so would allow comparison of tracking throughout time and it may be fruitful to link certain privacy-related events with changes in tracking. For instance, if Do Not Track becomes a widely-accepted standard (like the US government is pushing for), how different will the tracking landscape look? Would tracking increase or decrease for people not utilizing Do Not Track?
 
-Another extension to our study would be to look deeper into other methods of tracking. Third-party cookies, third-party HTTP requests, and AdBlock rules don?t tell the whole story. For example, even though Google has very few third-party cookies or requests, they are probably tracking users more than other websites that have many third-party cookies or requests. In a similar vein, many major service providers like Google are also their own analytics providers. We do not account for this possibility in our study, but developing methods for doing so may reveal a more complete picture.
+Another extension to our study would be to look deeper into other methods of tracking. Third-party cookies, third-party HTTP requests, and AdBlock rules don't tell the whole story. For example, even though Google has very few third-party cookies or requests, they are probably tracking users more than other websites that have many third-party cookies or requests. In a similar vein, many major service providers like Google are also their own analytics providers. We do not account for this possibility in our study, but developing methods for doing so may reveal a more complete picture.
 
 The final thing we would like to investigate more is why we see the results we do. What is causing the US to have much more tracking than Japan even though they are both sectoral countries? As of now we have some assumptions that it may be cultural or that the popular websites in Japan differ in category from those in the US or that the popular sites in Japan may fall under the regulation of a stricter sector. None of this can be confirmed by our data so additional research would have to be done to confirm or deny these assumptions.
 
