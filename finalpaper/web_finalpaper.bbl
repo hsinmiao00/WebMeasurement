@@ -81,13 +81,17 @@ SeleniumHQ, ``{SeleniumHQ. [online]. available: http://www.seleniumhq.org/}.''
 Scrapinghub, ``{Adblockparser python module. [online]. available:
   https://github.com/scrapinghub/adblockparser}.''
 
-\bibitem{torsocks5}
-{Chris Hansen}, ``{How to use Tor as a Socks5 proxy. [online]. available:
-  http://www.deepdotweb.com/2014/05/23/use-tor-socks5-proxy/}.''
+\bibitem{economist}
+{The Economist}, ``{Reinventing the newspaper},'' 2011.
 
-\bibitem{MITM}
-``{Bug Report: Issues with MITMProxy and upstream SOCKS proxies. [online].
-  available: https://github.com/mitmproxy/mitmproxy/issues/211}.''
+\bibitem{exchangewire}
+{Ronan Shields}, ``{The Cross-Device Chasm And Why Statistical Identification
+  Matters. [online]. available:
+  https://www.exchangewire.com/blog/2014/04/22/the-cross-device-chasm-and-why-statistical-identification-matters/}.''
+
+\bibitem{ico}
+{Information Commissioner's Office, UK}, ``{The EU cookie law [online].
+  available: https://ico.org.uk/for-organisations/guide-to-pecr/cookies/}.''
 
 \bibitem{toor}
 {Amar Toor}, ``{How Putin's cronies seized control of Russia's Facebook.
