@@ -16,13 +16,13 @@ Alexa, ``{The top 500 sites on the web. [online]. available:
 OpenWPM, ``{OpenWPM. [online]. available: https://github.com/citp/OpenWPM}.''
 
 \bibitem{wsj_fb}
-J.~Marshall, ``{Facebook Extends Reach With New Advertising Platform. [online].
-  available:
+{Jack Marshall}, ``{Facebook Extends Reach With New Advertising Platform.
+  [online]. available:
   http://online.wsj.com/articles/facebook-extends-reach-withad-platform-1411428726}.''
 
 \bibitem{Google_EU_marketingland}
-G.~Sterling, ``{EU Seeking Numerous Google Privacy Disclosures, Policy Changes.
-  [online]. available:
+{Greg Sterling}, ``{EU Seeking Numerous Google Privacy Disclosures, Policy
+  Changes. [online]. available:
   http://marketingland.com/consent-google-analytics-one-many-privacy-changes-sought-europe-101495}.''
 
 \bibitem{Mayer_Mitchell}
@@ -53,7 +53,8 @@ G.~Sterling, ``{EU Seeking Numerous Google Privacy Disclosures, Policy Changes.
   the 22nd International Conference on World Wide Web}}, 2013.
 
 \bibitem{sweeney}
-L.~Sweeney, ``{Discrimination in Online Ad Delivery},'' {\em Queue}, 2013.
+{Latanya Sweeney}, ``{Discrimination in Online Ad Delivery},'' {\em Queue},
+  2013.
 
 \bibitem{balebako}
 {Rebecca Balebako, Pedro G. Leon, Richard Shay, Blase Ur, Yang Wang, Lorrie
@@ -81,7 +82,7 @@ Scrapinghub, ``{Adblockparser python module. [online]. available:
   https://github.com/scrapinghub/adblockparser}.''
 
 \bibitem{torsocks5}
-C.~Hansen, ``{How to use Tor as a Socks5 proxy. [online]. available:
+{Chris Hansen}, ``{How to use Tor as a Socks5 proxy. [online]. available:
   http://www.deepdotweb.com/2014/05/23/use-tor-socks5-proxy/}.''
 
 \bibitem{MITM}

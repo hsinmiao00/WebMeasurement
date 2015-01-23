@@ -27,7 +27,7 @@ Warning--entry type for "openwpm" isn't style-file defined
 --line 139 of file ./web.bib
 You've used 21 entries,
             1876 wiz_defined-function locations,
-            558 strings with 6783 characters,
+            558 strings with 6791 characters,
 and the built_in function-call counts, 2523 in all, are:
 = -- 197
 > -- 72
