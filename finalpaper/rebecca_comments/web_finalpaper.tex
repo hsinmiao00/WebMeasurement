@@ -1,0 +1,861 @@
+
+%% bare_jrnl.tex
+%% V1.4
+%% 2012/12/27
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8 or later) with an IEEE journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex,
+%%                    bare_jrnl_transmag.tex
+%%*************************************************************************
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference]{IEEEtran}
+%\documentclass[12pt,draft,onecolumn]{IEEEtran}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[journal]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+% Added by Rebecca
+\usepackage{color}
+
+\newcommand{\todo}[1]{}
+\renewcommand{\todo}[1]{{\color{red} TODO: {#1}}}
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/tex-archive/info/epslatex/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Do not use the stfloats baselinefloat ability as IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/dblfloatfix/
+
+
+
+
+%\ifCLASSOPTIONcaptionsoff
+%  \usepackage[nomarkers]{endfloat}
+% \let\MYoriglatexcaption\caption
+% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
+%\fi
+% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and 
+% Axel Sommerfeldt. This package may be useful when used in conjunction with 
+% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
+% submissions have lists of figures/tables at the end of the paper and that
+% figures/tables without any captions are placed on a page by themselves at
+% the end of the document. If needed, the draftcls IEEEtran class option or
+% \CLASSINPUTbaselinestretch interface can be used to increase the line
+% spacing as well. Be sure and use the nomarkers option of endfloat to
+% prevent endfloat from "marking" where the figures would have been placed
+% in the text. The two hack lines of code above are a slight modification of
+% that suggested by in the endfloat docs (section 8.4.1) to ensure that
+% the full captions always appear in the list of figures/tables - even if
+% the user used the short optional argument of \caption[]{}.
+% IEEE papers do not typically make use of \caption[]'s optional argument,
+% so this should not be an issue. A similar trick can be used to disable
+% captions of packages such as subfig.sty that lack options to turn off
+% the subcaptions:
+% For subfig.sty:
+% \let\MYorigsubfloat\subfloat
+% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
+% However, the above trick will not work if both optional arguments of
+% the \subfloat command are used. Furthermore, there needs to be a
+% description of each subfigure *somewhere* and endfloat does not add
+% subfigure captions to its list of figures. Thus, the best approach is to
+% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
+% and instead reference/explain all the subfigures within the main caption.
+% The latest version of endfloat.sty and its documentation can obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/endfloat/
+%
+% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
+% later in the document, say, to conditionally put the References on a 
+% page by themselves.
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/url/
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+%\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+% Do not put math or special symbols in the title.
+\title{Variations in Tracking in Relation to Geographic Location}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+\author{ Nathaniel Fruchter,
+        Hsin Miao,
+        Scott Stevenson,
+        Rebecca Balebako
+        }% <-this % stops a space
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~11, No.~4, December~2012}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2012 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{\{nhf,hsinm,sbsteven\}@andrew.cmu.edu, me@rebeccahunt.com, lorrie@cs.cmu.edu}
+
+
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+Different countries have different privacy regulatory models. These models impact the perspectives and laws surrounding internet privacy. However, little is know about how effective the regulatory models are when it comes to limiting online tracking and advertising policy. In this paper, we propose a method for investigating tracking behaviors by analyzing the amount of tracking cookies in different countries. We collect tracking cookies on top websites in various countries around the world that utilize these different regulatory models. We found that there are significant differences in tracking activity between different countries using several metrics. We also suggest various ways to extend this study which may yield a more complete representation of tracking from a global perspective.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%IEEEtran, journal, \LaTeX, paper, template.
+%\end{IEEEkeywords}
+
+
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+\section{Introduction}
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps.
+% 
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+\IEEEPARstart{P}{rivacy} 
+laws have been enacted worldwide with the purpose of protecting internet users' private information. Privacy laws can be divided into four main models
+ \cite{IAPPbook} that differ in scope, enforcement, and adjudication. These four regulatory models are: comprehensive, sectoral, co-regulatory, or mixed/no-policy. The comprehensive model is adopted in the European Union, sectoral model is adopted in the United States,  co-regulatory model is adopted in Australia, and mixed/no-policy model is adopted in the People's Republic of China~\cite{solove2006model, IAPPbook}. These models impact how countries handle privacy both legally and culturally, specifically in the realms of online tracking and privacy legislation. 
+
+Web tracking is implemented in a variety of ways, some of the most popular being third-party cookies and JavaScript tracking code. Commercial websites utilize a diverse plethora of trackers for various purposes such as targeted advertisements. Although privacy laws vary in different countries, there is currently a lack of information as to whether the number and types of trackers differ between countries, and whether this is impacted by different privacy regulation models. The purpose of this paper is to establish a empirical method for determining relationship between the amount of tracking and various countries that employ different privacy regulatory models.
+
+In this project, we compared the amount of trackers on websites that operate in various countries with different privacy models. This paper offers three main contributions.
+\begin{itemize}
+\item We build, test, and describe an empirical, automated method for measuring the amount of web tracking in different countries, which can help determine the effectiveness of different privacy regulatory models.
+\item We examine the level of web tracking in four different countries representing three regulatory models, finding significant differences between countries.
+\item We investigate whether the location of the user or the location of the site is the factor that leads to differences in tracking between countries, finding that the site's country is more important than the visitor's country.
+\end{itemize}
+
+We have chosen Germany to represent the comprehensive model, the United States and Japan to represent the sectoral model, and Australia to represent the co-regulatory model. The sites that we are interested in are Alexa Top 250 sites \cite{Alexa} that have domains in multiple countries. We utilized Amazon Web Services to visit and crawl the data from the websites by servers in those countries.
+
+We locate and identify these trackers using 3rd party HTTP requests and cookies. In addition, we identify ads from the websites by using a list provided by AdBlock browser extension \cite{adblock}. Automation of the process is handled using the OpenWPM \cite{openwpm} tool which allows for synchronization across browsers and virtual machines ensuring that requests will occur at the same time. 
+
+In the following sections, we will first review some related work. Detailed descriptions of our method and experimental results are stated in Section III and IV. Discussion and possibilities for future work are described in Section V and VI.
+
+
+\section{Related Work}
+Privacy in the news seems inescapable; a general concern regarding the intrusiveness and pervasiveness of online tracking, advertising, and monitoring has caught the public attention. For example, concerns over the activities of social networking sites and advertisers such as Facebook  bring up issues of anonymity and tracking in daily life \cite{wsj_fb}. Similarly, the level of privacy protection put into place by industry giants such as Google has come under scrutiny as jurisdictions with more comprehensive privacy regulations have called the effectiveness of their protections into question \cite{Google_EU_marketingland}.
+
+These worries also demonstrate the large amount of change that the Internet has undergone in a relatively short amount of time. As Mayer and Mitchell note \cite{Mayer_Mitchell}, individual instances of web content have evolved from a single-origin affair into a conglomeration of  ``myriad unrelated  `third-party' websites," each facilitating anything from advertising to social media. 
+This has been demonstrated by Krishnamurthy and Wills \cite{Krishnamurthy} in their longitudinal study, demonstrating what they term an ``increasing aggregation of user-related data by a steadily decreasing number of entities."
+Furthermore, this explosion of third parties has existed an environment with little to no regulation until very recently \cite{Mayer_Mitchell}, with advances only occurring in the comprehensive regulatory environment provided by the European Union.  
+
+We give a brief introduction to the privacy regulatory models.  We then describe previous work in privacy-related web measurement. Finally, we provide background on best practices for web measurement methods.
+
+\subsection{Privacy Regulation Models}
+Privacy regulations differ around the world~\cite{flaherty1992protecting,madsen1992handbook}.  The different regulatory models employed can be divided in several ways.  While we use the taxonomy of regulatory models described below, other work has provided a more granular catagorization of regulatory models~\cite{Milberg:1995:VPI:219663.219683, madsen1992handbook}.  The empirical method described in this paper can be applied to either taxonomy of privacy regulatory models, as long as countries from all regulatory models are represented.
+
+Different privacy regulation models around the world may have different impacts on the market, technology, and law~\cite{IAPPbook}. In this work, we examine four models of privacy regulations. 1.) Comprehensive model privacy regimes view privacy as a fundamental human right.  They require companies and organizations protect personal information by placing limits on collection, use, and disclosure. A privacy authority agency enforces privacy laws.  This comprehensive model is adopted in the European Union~\cite{IAPPbook}.  2.) In a sectoral model, the government enacts privacy laws about a particular industry sector, for example in health or finance, but does not provide fundamental protection on privacy.  The sectoral model is adopted in the United States~\cite{solove2006model}.  3.) The co-regulatory model relies on industries to develop their privacy policies for data protection.  This is adopted in Australia. 4.) Finally, a mixed/no-policy model is describes the regimes in which either privacy is not protected, or uses a mix of the other three policies.  According to Swire and Ahmad, this models is adopted in the People's Republic of China~\cite{IAPPbook}. 
+
+\subsection{Privacy-related Web Measurement}
+In order to address and understand the impact of new web technologies on privacy, many efforts have been made to advance the field of privacy-related web measurement in recent years. Engelhardt et al. \cite{openwpm_article} have identified 32 studies that they categorize as ``web privacy measurement studies." This category of study has great breadth, ranging from technical analyses of information leaked by web scripting languages \cite{jang} to empirical analyses of search engine personalization \cite{hannak}.  In this vein, numerous comparison-style studies have also been run, touching on diverse subjects such as discrimination in online advertising \cite{sweeney} and the effectiveness of online privacy tools \cite{balebako}.
+
+The above studies make valuable contributions by taking on tasks like revealing the sources of potential privacy harms, detailing the effects of these third party entities, and taking a user-centric view to studying and enhancing privacy. However, they generally do not explore the impact of industry and country-level policy on the overall incidence of these third parties. Connolly comes the closest, performing an evaluation of various websites' compliance with the European Union's ``Safe Harbor" privacy policy. Finding an astoundingly small subset of companies in compliance with Safe Harbor directives, Connolly discusses the ``significant" privacy risk to consumers resulting from noncompliance   \cite{connolly}. Issues like these raise the necessity for a more comprehensive measurement of jurisdictional differences in tracking and advertising activity.
+
+\subsection{Web Measurement Methodology}
+\todo{REBECCA: I don't know what you are saying here, so I'm attempting to make it more clear, but I'm not sure I quite have it right}
+Englehardt et al. conducted a study that reviewed general experimental frameworks and performed methodological analyses of extant web measurement studies.  They found that web measurement studies are considered challenging for two reasons: causality and automation \cite{openwpm_article}.  Controlled and randomized experiments are difficult in the dynamic, ever-changing web ecosystem \cite{guha2010challenges}. Automation is difficult for several reasons, including that an automated script cannot always mimic real user behavior in browsers~\cite{openwpm_article}.  These difficulties has lead to some inconsistency and reinvention in web measurement. In order to address these issues, Engelhardt et al. authors developed a platform, OpenWPM \cite{openwpm}, that addressed many of the issues of flexibility and scalability surrounding past web measurement studies. 
+OpenWPM is a Python-based web-crawler framework using Selenium \cite{Selenium}. Due to its flexibility and convenience, it has been validated in several studies \cite{openwpm}\cite{openwpm_article}. This framework is utilized in the work in order to avoid further problems, especially those surrounding replication of effort and methodological inconsistencies.
+
+\todo{ You need a section justifying why you looked at HTTP requests and web cookies. First start with a sentence and some references describing why some people feel behavioral advertising invades privacy (Cite "Smart Useful Scary Creepy" by Blase Ur and Pedro Leon and Lorrie and some work by Aleecia Mcdonald and Lorrie)  Then describe what http request ad cookies  are and how they are used in behavioral advertising.  This only needs to be a paragraph or two but it is super important!}
+
+\section{Method}
+\todo{Here is my attempt at describing the method in a broad swath overview, but you need to correct this paragraph if I am inaccurate}.
+
+We developed an automated method for measuring web privacy in different regulatory environments.  We examined at the quantity and type of web cookies set and third-party HTTP requests made when browsing to popular sites from different countries.  To do so, we automated web browsing to 250 sites in different countries at the simultaneously.  We collected data about the results, including the HTTP requests and cookies.  Then we used a heuristic to examine results specifically related to web tracking.  We then use statistical analysis to compare the differences between countries.  
+
+For this method, we needed to overcome several technological hurdles, such as automating browsing from several countries in a controlled manner.  Due to ad churn, we needed to run the tests from multiple countries at the same time~\cite{guha2010challenges}. Furthermore, we needed a method to determine whether the HTTP requests and cookies were third-party urls and related to web tracking.  In the next subsections, we describe how our method addresses these issues.
+
+\subsection{Sourcing requests from several different countries}
+
+We have chosen Germany to represent the comprehensive model, the United States and Japan to represent the sectoral model, and Australia to represent the co-regulatory model. Therefore, we sourced our data collection from four different locations.
+
+To source an internet connection point at these various locations around the world, we used Amazon Web Services, or AWS.~\footnote{\url{http://aws.amazon.com}} AWS provides cloud-based virtual machines that can be configured in numerous ways. We installed OpenWPM on these machines and ran our tests from the cloud without having to rely on a proxy to set our location. AWS offers virtual machines in any of the following locations: Virginia (US), Ireland (EU), Frankfurt (EU), Oregon (US), California (US), Singapore (Asia), Sydney (AUS), Sao Paolo (South America), and Tokyo (JP) \cite{amazonregion}. This covers almost all of the regions we would like to examine -- the only regions not represented are Russia and China which are currently not options when using AWS EC2.  AWS employs a 'pay-for-what-you-use' model, so it is economically convenient to use. For example, running our study cost \todo{include the overall cost of the study }.
+
+\subsection{Selecting which sites to visit}
+\todo{ Please check that I am correctly describing what you did, because you don't clarify in the paper}.
+For each country, we crawled the top 250 sites for that country using the Alexa list by country~\footnote{\url{http://www.alexa.com/topsites/countries/DE} Accessed December 2014}.  Typically these are top level domains, and not subpages within a site. While there was some overlap of sites between countries, such as \url{www.google.com} and \url{www.wikipedia.com}, there were differences between the country lists.  First, some domains were specific to the country, such as \url{www.facebook.de} in Germany.  Second, many sites were specific to that country or language.  One example of a website specific to Germany is the domain for a popular new journal Der Spiegel (\url{http:\\www.Spiegel.de}), which was not see on the other country lists.  
+
+\subsection{Automating the web crawls}
+
+Our next step was to automate the data collection .  We collected a number of metrics related to tracking, including the number of cookies and HTTP requests. Engelhardt et al.'s OpenWPM platform is a purpose-built web measurement platform that logs a large amount of web session data in a standardized SQLite database format, making it the perfect tool for our study. We utilized the most recent publicly available version of OpenWPM \todo{what version number} for the data collection portion of our study and used the platform's API to programmatically crawl a list of the top 250 websites as defined by Alexa\cite{Alexa}. OpenWPM's Firefox backend was used for the crawl with both JavaScript and Flash enabled.
+
+Two variables of interest are located within different SQLite tables generated by OpenWPM with each crawl: cookies and http\_requests. We extracted the domains of cookies and the URLs of HTTP requests from these two tables by using the sqlite3 library in Python.
+
+\subsection{Extracting Third-party HTTP requests and cookies}
+
+In this study, we were not interested in analyzing first-party cookies and HTTP requests, as these are often not considered privacy invasive~\cite{mcdonald2011track}. Therefore, we had to extract the third-party elements of our collected data. In order to further analyze third-party cookies and HTTP requests, we set a rule to determine whether the URL in a record is related to the website where the record was extracted. To be more specific, if the URL in a record does not contain the domain name of the website we are currently visiting, it is a third-party cookie or HTTP request. For example, if a cookie is extracted from amazon.de and the URL is fls-eu.amazon.de, it is a first-party cookie because the domain is identical ('amazon.de'). In contrast, if a cookie also extracted from amazon.de has the domain zanox.com, then the domains are not identical and it is a third-party cookie. By implementing these procedures, we can use statistical tools to analyze the collected data.
+
+
+\subsection{Tracker Heuristic: AdBlock ``easylists"}
+
+Not all the URLS identified using the above method are neccessarily related to advertising and web tracking.  They may also be first-party content hosted on content management networks or separate servers maintained by the first-party.  Therefore, we used an additional heuristic to determine which URLs are related to web tracking and advertising.  
+
+AdBlock Plus \cite{adblock}  is a popular browser extension available for both Firefox and Chrome which allows users to filter and block elements on a webpage according to user-specified rules. As evidenced by the extension name, this capability is most often used in service of blocking advertisements, tracking code, or other content deemed annoying, invasive, or objectionable. Due to its open source nature and large, international user base, AdBlock Plus provides a unique resource: a large, crowd-sourced list of rules that allows us to detect the presence of advertising or tracking assets within a list of URLs and page elements. These rules are compiled in two ``easylists"  \cite{easylist} provided on the AdBlock website, with one focused on ad-blocking rules and the other focused on tracker-blocking rules.
+
+Using a similar approach to the one detailed in the last section, we extracted the full URLs of HTTP requests and responses from the OpenWPM crawl database using Python and the sqlite3 library. We then used the adblockparser  \cite{adblockparser} Python module to match the extracted HTTP request and response URLs against the two sets of AdBlock rules mentioned above. The number of positive ad or tracker hit (positive pattern matches) were aggregated by domain, country, and rule set in order to produce summary statistics for use in further analysis. \todo{if this is what you mean by ''hit" in the tables later, you need to say this specifically.  Eg. "In this paper, when we refer to ``hit" we specifically mean a positive match between and Adblock easy list URL and the domain seen in a HTTP request or cookie."}
+
+\section{Results}
+\todo{You need a paragraph here summarizing the overall results (tell us what you are going to tell us) I've out some filler here as an example, but make sure what I've written is correct, and to add relevant high-level results}
+We ran our automatic script on the top \todo{250} sites for each of four countries.  We collected all the HTTP requests and cookies, and then used the heuristic and algorithm described in the previous section to identify probably trackers.  We found that visiting the sites from the US yielded the most third-party HTTP-requests and third-party cookies.  
+
+\subsection{Evaluation Metric: Third-Party Cookies and Requests}
+
+The goal of our study was to discover the variation in trackers between different countries.  In our experimental design, the independent variable is country. It is a categorical variable with 4 levels if we compare the number of trackers in different countries. If we compare the trackers in different regulation models, there are three levels, as Japan and the United States both belong to the same sectoral model category. 
+
+There are some dependent variables used for further analyses. First, we analyzed the number of third-party cookies and HTTP requests, which is closely related to online trackers. Second, we examined third-party and first party cookies and HTTP requests to see whether the ratios are identical in different countries.  This is because the number of third-party cookies and HTTP requests are dependent on the number of first-party cookies and requests.  \todo{I STILL don't understand what you are trying to say, this needs to be unpacked. My guess is "It is expected that as more first-party sites are visited, we will also have more third-party cookies and trackers" but it confuses me that you would visit different numbers of web sites.}  Moreover, the number of first-party cookies and HTTP requests are analyzed because some sites (e.g., Google) are both an analytics provider and a service provider, as such they may use other methods besides third-party cookies to track users. 
+
+Due to the categorical-quantitative nature of our data, a one-way ANOVA test was deemed appropriate for our analyses. More specifically, all data was analyzed using the nonparametric Kruskal-Wallis test due to the the variable sample size and non-normality of our samples. 
+
+\subsection{Third-party HTTP requests}
+We compared the number of third-party HTTP domain requests among different countries. 
+Table \ref{thirdHTTP} shows the average rank for each country in Kruskal-Wallis test. We found that the difference of the numbers of third-party domain of HTTP requests among our four countries are significant ($\chi^{2} = 43.863; df = 3; p < 0.0005$). We also found that there are more third-party HTTP requests in the US compared to Germany and Australia ($\chi^{2} =10.752; df=1; p=0.001$). The differences between Germany and Australia were not significant. Moreover, there were more third-party HTTP requests in Germany and Australia compared to Japan ($\chi^{2} =39.709; df=1; p<0.0005$).
+
+\begin{table}[t]
+\centering
+\caption{Rank of the number of third-party HTTP domain requests among different countries in Kruskal-Wallis test. The US had significantly more third-party HTTP requests than the other countries.}
+\label{thirdHTTP}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{country} & \textbf{Rank} \\ \hline
+US               & 575.00        \\ \hline
+AU               & 511.79        \\ \hline
+DE               & 492.52        \\ \hline
+JP               & 406.69        \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Cookies}
+We also compared the number of third-party and first party cookies among different countries. 
+Table \ref{thirdcookie} shows the average rank of number of third-party cookies for each country in Kruskal-Wallis test. Although the difference in total number of first-party cookies is not significant, the difference of number of third-party cookies is significant ($\chi^{2}=13.147; df=2; p=0.004$). \todo{take this up a level: one sentence on the implication, such as "This implies that a visitor from the US would experience more tracking. or whatever it is"}
+
+We found similar results when comparing the number of domains in third-party HTTP requests. There are more third-party cookies in the US compared to Germany ($\chi^{2} = 4.111; df=1; p=0.043$) and Australia. Also, the difference between Germany, Australia, and Japan is not significant.
+
+\todo{Note: I reordered all the tables by rank}
+\begin{table}[t]
+\centering
+\caption{Rank of the number of third-party cookies among different countries in Kruskal-Wallis test.}
+\label{thirdcookie}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{country} & \textbf{Rank} \\ \hline
+US               & 499.14        \\ \hline
+DE               & 445.51        \\ \hline
+AU               & 438.53        \\ \hline
+JP               & 411.91        \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Correlation between HTTP requests and cookies}
+Table \ref{correlation} shows the correlation between the number of third-party domain for HTTP requests and third-party cookies. We found that in these countries these two variables are strongly correlated, providing an indicator for the validity of the measure. \todo{ more on this, but perhaps it will come out in the related work when you describe this a bit more... is there one that we already have confidence in and the other we just want to see if it is correlated?  In other words, why do we care about correlation}
+
+\begin{table}[t]
+\centering
+\caption{Correlation between HTTP requests and cookies}
+\label{correlation}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Country} & \textbf{r} \\ \hline
+AU               & 0.691      \\ \hline
+DE               & 0.634      \\ \hline
+JP               & 0.778      \\ \hline
+US               & 0.715   \\  \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Evaluation Metric: AdBlock rules}
+
+
+\begin{table*}[t]
+\centering
+\caption{Summary Statistics For All Tracking-Related HTTP Requests \todo{I don't understand this table at all - is this across all sites and countries?  What are Hits? You have not previously described what you mean by that term. Also please describe this table in associated text somewhere?}}
+\label{summaryTracking}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{N} & \textbf{Mean Requests (SD)} & \textbf{Mean Hits (SD)} & \textbf{Mean Proportion Hits (SD)} \\ \hline
+1931       & 111 (116)                   & 6.54 (7.7)              & 0.06 (0.05)                        \\ \hline
+\end{tabular}
+\end{table*}
+
+
+\subsubsection{Origin-dependent tracking activity }
+
+One crucial phenomenon to test for is the presence of origin-dependent tracking activity, something that we will term geographic tracker churn for short. The essence of the question is simple: if user A visits example.com from country A and user B also visits example.com at the same time, but from country B, will they receive the same type and number of trackers? We evaluate the presence of this churn for several reasons. First, the presence or absence of the churn will help us determine how heavily geographic factors need to be controlled for in this (and other) studies. Second, the presence of churn could indicate interesting, adaptive behavior by tracking companies that could warrant further investigation. \todo{I'm STILL confused by your use of word churn here.  Ad churn refers to the fact that  you won't see the same ad on different days as ad compaigns change. Your description doesn't sound like churn - I think what you wanted to say is that you isolated the impact of request location.  You found no significant differences from when you visit the same sites from different locations, indicating that the sites do not change their behavior based on visitor's location.  Instead, sites tailored to specific countries are probably where the difference is coming from.   --- later -- ah I see you have a paragraph explaining this later in the text.  Put those two sections together, since we highlight it as a major finding.}
+
+To this end, we crawled Alexa's list of the top 500 global sites from all four of our server locations at identical times and compared matches against Adblock's tracking EasyList. Controlling for outliers, nonparametric tests of both the absolute number of hits by country and the proportions of hits by country show no significant difference (n hits: $\chi^{2}=0.805; df=3; p>0.84$, proportion: $\chi^{2}=0.172; df=3; p>0.98$). Because of this, we can conclude that geographic tracker churn will not be a significant factor for us within the scope of our experiment.  
+
+\subsubsection{More trackers than ads}
+However, there were significant differences in type of hit (trackers vs. advertisements) within the same top 500 sites. The proportion of requests associated with trackers was significantly higher than the proportion associated with advertisements ($\chi^{2}=45.1; p<0.0001$). A pairwise comparison across the top 500 sites showed that trackers accounted for approximately 2\% more requests than advertisements ($95\% CI [0.015, 0.021]$). This is significant considering the overall proportion of requests for both ads and trackers is 5.4\% ($SEMean = 0.0009, 95\% CI [0.052, 0.056]$). \todo{what are the privacy implications?  That users don't even see the trackers?  Bring this up a level}
+
+\subsubsection{Differences by country}
+
+\begin{table*}
+\centering
+\caption{Summary Statistics By Country For Tracking-Related HTTP Requests}
+\label{trackingbycountry}
+   \begin{tabular}{|l|l|l|l|l|l|l|}
+   \hline
+    \textbf{Country}  & \textbf{\begin{tabular}[c]{@{}l@{}}Mean\\ (Number\_Requests)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Mean\\ (Number\_Hits)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Mean\\ (Proportion\_hits)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Std Dev\\ (Number\_Requests)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Std Dev\\ (Number\_Hits)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Std Dev\\ (Proportion\_hits)\end{tabular}} \\ \hline
+   AU           & 99.19                  & 6.83               & 0.06                   & 80.70                     & 7.0                   & 0.05                      \\ \hline
+   DE           & 121.04                 & 5.70               & 0.05                   & 160.74                    & 6.31                  & 0.05                      \\ \hline
+   JP           & 103.15                 & 4.10               & 0.05                   & 101.64                    & 4.82                  & 0.05                      \\ \hline
+   US           & 120.59                 & 9.34               & 0.08                   & 105.10                    & 10.41                 & 0.05                      \\ \hline
+   \end{tabular}
+\end{table*}
+
+
+
+Based on our limited sample of countries per regulatory model, we do not draw conclusions about the regulatory models themselves. We do find interesting results when examining each individual country in a series of pairwise comparisons between the top 250 sites in each country.  Differences in the proportion of total HTTP requests associated with trackers differs significantly and may imply the presence of significant variation beyond what can be explained on the country or model level.
+
+\subsubsection{More tracking-related requests in the United States}
+A pairwise examination of the proportion of HTTP requests related to tracking activity (operationalized as the proportion of requests that matched an Adblock rule) show that United States has significantly more tracking activity compared to all of our other countries. While the differences varied by country, each comparison showed a significantly greater (at least $p<0.02$) percentage of tracking requests, ranging from less than 1\% (US-AU) to more than 3\% (US-JP). Table \ref{pairwise} displays these pairwise tests, along with confidence intervals, in more detail.
+
+\subsubsection{Differences within the sectoral model}
+It is especially interesting to note the comparisons between our two sectoral model countries, the United States and Japan. Even though they ostensibly have the same regulatory model, the United States showed a significantly greater (all $p<0.02$) amount of tracking-related HTTP requests (anywhere from 2.8\% to 4\% more). Considering the average number of requests per page is over 100 (see table \ref{summaryTracking}), even a 4\% increase in tracking-related requests could indicate the loading of 4 to 5 more tracking elements or scripts.
+
+\subsubsection{Does origin matter?}
+When this current data set, based on the top 250 sites from each country, is compared to the top 500 global sites data set used earlier, an interesting possibility presents itself. Looking at the series of pairwise comparisons for the top 500 sites (see Table \ref{pairwise500}), none of the differences between countries are significant (all $p>0.71$). This indicates that it may be the website's country origin, not the user's, that matters in terms of tracking activity present. However, there may be other factors that account for this difference in variation, something that will be expanded on in our discussion below. \todo{ok, this is what I wanted you to say earlier... put those sections together somehow}
+
+\begin{table}[t]
+\centering
+\caption{Pairwise Comparisons Between Countries for Tracking Hits.}
+\label{pairwise}
+\begin{tabular}{|l|l|l|l|l|}
+   \hline
+\textbf{Country A} & \textbf{Country B} & \textbf{Z}     & \textbf{p}              & 9\textbf{5\% CI For Change}   \\    \hline
+US        & JP        & 10.42 & \textless.0001 & {[}0.028, 0.040{]}   \\   \hline
+US        & DE        & 7.77  & \textless.0001 & {[}0.018, 0.031{]}   \\   \hline
+US        & AU        & 2.57  & \textless.02   & {[}0.001, 0.014{]}   \\   \hline
+JP        & DE        & -3.64 & \textless.0005 & {[}-0.013, -0.002{]} \\   \hline
+DE        & AU        & -5.29 & \textless.0001 & {[}-0.021, -0.009{]} \\   \hline
+AU        & AU        & -8.33 & \textless.0001 & {[}-0.031, -0.019{]}\\   \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Pairwise Comparisons Between Countries for Top 500 Global Sites.}
+\label{pairwise500}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Country A} & \textbf{Country B}  & \textbf{p} \\ \hline
+JP                            & DE                            & 0.855                         \\ \hline
+JP                            & AU                            & 0.963\\ \hline
+US                            & DE                            & 0.859                         \\ \hline
+DE                            & AU                            & 0.838                         \\ \hline
+US                            & JP                            & 0.739                         \\ \hline
+US                            & AU                            & 0.714                         \\ \hline        
+\end{tabular}
+\end{table}
+
+
+
+\section{Discussion}
+
+\subsection{Outliers}
+We are also interested in outliers about tracking behaviors in the websites. For example,  the US, \url{nydailynews.com} has the most number of third-party cookies in top 250 websites. There are 6,546 third-party cookies set when when that website is visited. Other news websites including \url{foxnews.com}, \url{sfgate.com}, \url{drudgereport.com} and \url{nypost.com} all have more than 900 third-party cookies. Similarly, we found that news websites also play important roles in Japan and Australia'€™s third-party cookie statistics. The site \url{theaustralian.com.au} has 1,819 third-party cookies on its website, which is the third most in their top 250 websites. In addition, in Japan, \url{reuters.com}has 1,827 third-party cookies, which is the most in top 250 websites. The finding is interesting because it implies that news websites rely on third-party cookies heavily in the US, Japan, and Australia. However in Germany, the tracking behaviors are not similar to other three countries because most of third-party cookies are set by shopping websites instead of news websites.  
+
+\subsection{Other factors}
+Currently, we do not have enough data to conclusively say whether the different privacy regulatory models are actually statistically different from one another in practice.  However, we did find evidence that privacy regulatory models alone may not indicate the level of technological privacy users get. For instance, we noticed that the US had many more tracking indicators than Japan overall, even though they both follow the sectoral model. We are unsure of exactly why this is the case but we suspect that it may be due to cultural differences or perhaps the types of websites that are popular. It could be the case that the popular sites in Japan fall under a particular sector that is more regulated than those in the US. 
+
+Another possibility along these lines is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan -- €”another factor that could lead to the differences in tracking we saw. Furthermore, this type of motivation could actually be related to our findings in the realm of news websites. Due to the shifting media landscape in many countries, newspapers and other journalistic organizations are constantly looking for new sources of revenue. Some sources put online advertising at roughly 20 percent of advertising revenue and this, along with other cultural and corporate factors, may contribute to the disproportionately large amount of advertising and tracking found on news sites \cite{economist}.
+
+\subsection{Limitations}
+A study collecting data from sources as dynamic as a popular website may encounter several issues with external validity. For example, the tracking activity present on a site may not be entirely deterministic given a certain page load -- factors such as time of day and previous user activity may lead to differing types of activity behind the scenes \cite{exchangewire}. Further confounds such as the automated nature of our data gathering process may introduce other sources of variation; for example, some sites do not set cookies unless a user explicitly opts in \cite{ico}. While some related confounds like time of day were controlled for, the numerous sources of variation may warrant a follow-up study to assess the external validity of our data collection methods.
+
+
+
+\subsection{Future work}
+Since we were unable to access a node in China and Russia from which to run our script, we have no direct representation of the no privacy model regions. We initially thought that this would directly affect our ability to measure tracking properly but our results have shown that where we connect to a particular website from may have very little to do with tracking. This result is based on a small sample (just the US and Japan) so we would also like to verify this fact over a longer period of time and with more countries prior to making a concrete conclusion. China may be an exception to this finding since they have the ``Great Firewall of China" in place which may distort our results. %We are unsure of how much different the internet is inside and outside of China's firewall. 
+
+Russia is another interesting case and doesn't have the complication of a national firewall. Russia's government has been taking an increasingly aggressive interest in the internet, recently going so far as commandeering the Vkontakte, the `Facebook of Russia' \cite{toor}. Extending our study to incorporate these two countries seems very promising since it could yield results that are very different from what we have seen in our current study. In the case of China, AWS EC2 is currently in open beta (for Chinese residents only) for nodes in Beijing. Setting up a node there may be possible in the near future. This would also give us the ability to measure and compare tracking in China from inside and outside the firewall.
+
+It may be valuable to conduct this study again in the future as well. Doing so would allow comparison of tracking throughout time. There may be value in examining changes in tracking after privacy-related news or policy events. For instance, if Do Not Track becomes a widely-accepted standard, how different will the tracking landscape look? Would tracking increase or decrease for people not utilizing Do Not Track?
+
+Another extension to our study would be to look deeper into other methods of tracking. Third-party cookies, third-party HTTP requests, and AdBlock rules don't tell the whole story. For example, even though Google has very few third-party cookies or requests, they are probably tracking users more than other websites that have many third-party cookies or requests. In a similar vein, many major service providers like Google are also their own analytics providers. We do not account for this possibility in our study, but developing methods for doing so may reveal a more complete picture.
+
+The final thing we would like to investigate a better understand of country level difference. For example, what is causing the US to have much more tracking than Japan even though they are both sectoral countries? We can hypothesis that this may be cultural or that the popular websites in Japan differ in category from those in the US or that the popular sites in Japan may fall under the regulation of a stricter sector. None of this can be confirmed by our data so additional research would have to be done to confirm or deny these assumptions.  We expect collaboration from economists and international lawyers could improve understanding in this area.
+
+\section{Conclusion}
+Going into this experiment, we assumed that there would be a significant difference in tracking between countries in different privacy regulatory models. We expected to see the most tracking in the no-model and sectoral model countries, less in the co-regulatory model, and even less in the comprehensive model. To examine this, we developed a method for emperically and repeatably evaluating the web tracking in different countries.  
+
+We were also interested in determining if the country the website is based in, versus the country we are connecting from, plays a role in the amount of tracking. We were able to conclude that there were significant differences in tracking activity between different countries using several metrics. Due to our limited sample size, though, we were not able to draw strong conclusions regarding the models themselves. However, we were able to quantify many interesting variations in tracking behavior between countries and provide several directions for relevant future work to further investigate these variations.
+
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here.
+
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+%The authors would like to thank...
+
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+
+\bibliographystyle{ieeetr}
+\bibliography{./web} 
+
+% biography section
+% 
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+% that's all folks
+\end{document}
+
+
