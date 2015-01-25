@@ -1,0 +1,102 @@
+\begin{thebibliography}{10}
+
+\bibitem{IAPPbook}
+{Peter P. Swire and Kenesa Ahmad}, {\em {Foundations of Information Privacy and
+  Data Protection: A Survey of Global Concepts, Laws and Practices}}.
+\newblock IAPP, 2012.
+
+\bibitem{Alexa}
+Alexa, ``{The top 500 sites on the web. [online]. available:
+  http://www.alexa.com/topsites}.''
+
+\bibitem{adblock}
+``{Adblock Plus. [online]. available: https://adblockplus.org/en/about}.''
+
+\bibitem{openwpm}
+OpenWPM, ``{OpenWPM. [online]. available: https://github.com/citp/OpenWPM}.''
+
+\bibitem{wsj_fb}
+{Jack Marshall}, ``{Facebook Extends Reach With New Advertising Platform.
+  [online]. available:
+  http://online.wsj.com/articles/facebook-extends-reach-withad-platform-1411428726}.''
+
+\bibitem{Google_EU_marketingland}
+{Greg Sterling}, ``{EU Seeking Numerous Google Privacy Disclosures, Policy
+  Changes. [online]. available:
+  http://marketingland.com/consent-google-analytics-one-many-privacy-changes-sought-europe-101495}.''
+
+\bibitem{Mayer_Mitchell}
+{Jonathan R. Mayer and John C. Mitchell}, ``{Third-Party Web Tracking: Policy
+  and Technology},'' {\em {Security and Privacy (SP), 2012 IEEE Symposium on}},
+  2012.
+
+\bibitem{Krishnamurthy}
+{Krishnamurthy, Balachander and Wills, Craig}, ``{Privacy Diffusion on the Web:
+  A Longitudinal Perspective},'' {\em {Proceedings of the 18th International
+  Conference on World Wide Web}}, 2009.
+
+\bibitem{openwpm_article}
+{Steven Englehardt, Christian Eubank, Peter Zimmerman, Dillon Reisman, Arvind
+  Narayanan}, ``{Web Privacy Measurement: Scientific principles, engineering
+  platform, and new results},'' {\em Manuscript}, 2014.
+
+\bibitem{jang}
+{Jang, Dongseok and Jhala, Ranjit and Lerner, Sorin and Shacham, Hovav}, ``{An
+  empirical study of privacy-violating information flows in JavaScript web
+  applications},'' {\em {Proceedings of the 17th ACM Conference on Computer and
+  Communications Security}}, 2010.
+
+\bibitem{hannak}
+{Hannak, Aniko and Sapiezynski, Piotr and Molavi Kakhki, Arash and
+  Krishnamurthy, Balachander and Lazer, David and Mislove, Alan and Wilson,
+  Christo}, ``{Measuring Personalization of Web Search},'' {\em {Proceedings of
+  the 22nd International Conference on World Wide Web}}, 2013.
+
+\bibitem{sweeney}
+{Latanya Sweeney}, ``{Discrimination in Online Ad Delivery},'' {\em Queue},
+  2013.
+
+\bibitem{balebako}
+{Rebecca Balebako, Pedro G. Leon, Richard Shay, Blase Ur, Yang Wang, Lorrie
+  Faith Cranor}, ``{Measuring the effectiveness of privacy tools for limiting
+  behavioral advertising},'' {\em {In Web 2.0 Workshop on Security and
+  Privacy}}, 2012.
+
+\bibitem{connolly}
+{Chris Connolly}, ``{The US Safe Harbor - Fact or Fiction? [online]. available:
+  http://www.galexia.com/public/research/articles/research\_articles-pa08.html},''
+  {\em Galexia}, 2008.
+
+\bibitem{Selenium}
+SeleniumHQ, ``{SeleniumHQ. [online]. available: http://www.seleniumhq.org/}.''
+
+\bibitem{amazonregion}
+``{Regional Availability of AWS EC2. [online]. available:
+  http://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/}.''
+
+\bibitem{easylist}
+``{Easylist. [online]. available: https://easylist.adblockplus.org}.''
+
+\bibitem{adblockparser}
+Scrapinghub, ``{Adblockparser python module. [online]. available:
+  https://github.com/scrapinghub/adblockparser}.''
+
+\bibitem{economist}
+{The Economist}, ``{Reinventing the newspaper},'' 2011.
+
+\bibitem{exchangewire}
+{Ronan Shields}, ``{The Cross-Device Chasm And Why Statistical Identification
+  Matters. [online]. available:
+  https://www.exchangewire.com/blog/2014/04/22/the-cross-device-chasm-and-why-statistical-identification-matters/}.''
+
+\bibitem{ico}
+{Information Commissioner's Office, UK}, ``{The EU cookie law [online].
+  available: https://ico.org.uk/for-organisations/guide-to-pecr/cookies/}.''
+
+\bibitem{toor}
+{Amar Toor}, ``{How Putin's cronies seized control of Russia's Facebook.
+  [online]. available:
+  http://www.theverge.com/2014/1/31/5363990/how-putins-cronies-seized-control-over-russias-facebook-pavel-durov-vk},''
+  {\em {The Verge}}, 2014.
+
+\end{thebibliography}
