@@ -66,7 +66,7 @@
 % correct bad hyphenation here
 %\hyphenation{op-tical net-works semi-conduc-tor}
 
-
+\IEEEoverridecommandlockouts
 \begin{document}
 %
 % paper title
@@ -86,8 +86,8 @@
 
 \author{ Nathaniel Fruchter,
         Hsin Miao,
-        Scott Stevenson,
-        Rebecca Balebako
+        Scott Stevenson,\thanks{N. Fruchter, H. Miao, and S. Stevenson are with Carnegie Mellon University. Emails: \{nhf,hsinm,sbsteven\}@andrew.cmu.edu}
+        Rebecca Balebako \thanks{R. Balebako is with RAND Corporation; however all work was done while also at Carnegie Mellon. Email: balebako@rand.org}
         }% <-this % stops a space
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -132,10 +132,7 @@
 
 
 % use for special paper notices
-%\IEEEspecialpapernotice{\{nhf,hsinm,sbsteven\}@andrew.cmu.edu, me@rebeccahunt.com, lorrie@cs.cmu.edu}
-
-
-
+% \IEEEaftertitletext{}
 
 % make the title area
 \maketitle
@@ -438,12 +435,12 @@ US                            & AU                            & 0.714           
 \section{Discussion}
 
 \subsection{Outliers}
-We are also interested in outliers about tracking behaviors in the websites. For example,  the US, \url{nydailynews.com} has the most number of third-party cookies in top 250 websites. There are 6,546 third-party cookies set when when that website is visited. Other news websites including \url{foxnews.com}, \url{sfgate.com}, \url{drudgereport.com} and \url{nypost.com} all have more than 900 third-party cookies. Similarly, we found that news websites also play important roles in Japan and Australia'¤?s third-party cookie statistics. The site \url{theaustralian.com.au} has 1,819 third-party cookies on its website, which is the third most in their top 250 websites. In addition, in Japan, \url{reuters.com}has 1,827 third-party cookies, which is the most in top 250 websites. The finding is interesting because it implies that news websites rely on third-party cookies heavily in the US, Japan, and Australia. However in Germany, the tracking behaviors are not similar to other three countries because most of third-party cookies are set by shopping websites instead of news websites.  
+We are also interested in outliers about tracking behaviors in the websites. For example,  the US, \url{nydailynews.com} has the most number of third-party cookies in top 250 websites. There are 6,546 third-party cookies set when when that website is visited. Other news websites including \url{foxnews.com}, \url{sfgate.com}, \url{drudgereport.com} and \url{nypost.com} all have more than 900 third-party cookies. Similarly, we found that news websites also play important roles in Japan and Australia'Â¤?s third-party cookie statistics. The site \url{theaustralian.com.au} has 1,819 third-party cookies on its website, which is the third most in their top 250 websites. In addition, in Japan, \url{reuters.com}has 1,827 third-party cookies, which is the most in top 250 websites. The finding is interesting because it implies that news websites rely on third-party cookies heavily in the US, Japan, and Australia. However in Germany, the tracking behaviors are not similar to other three countries because most of third-party cookies are set by shopping websites instead of news websites.  
 
 \subsection{Other factors}
 Currently, we do not have enough data to conclusively say whether the different privacy regulatory models are actually statistically different from one another in practice.  However, we did find evidence that privacy regulatory models alone may not indicate the level of technological privacy users get. For instance, we noticed that the US had many more tracking indicators than Japan overall, even though they both follow the sectoral model. We are unsure of exactly why this is the case but we suspect that it may be due to cultural differences or perhaps the types of websites that are popular. It could be the case that the popular sites in Japan fall under a particular sector that is more regulated than those in the US. 
 
-Another possibility along these lines is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan -- ¤?another factor that could lead to the differences in tracking we saw. Furthermore, this type of motivation could actually be related to our findings in the realm of news websites. Due to the shifting media landscape in many countries, newspapers and other journalistic organizations are constantly looking for new sources of revenue. Some sources put online advertising at roughly 20 percent of advertising revenue and this, along with other cultural and corporate factors, may contribute to the disproportionately large amount of advertising and tracking found on news sites \cite{economist}.
+Another possibility along these lines is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan -- Â¤?another factor that could lead to the differences in tracking we saw. Furthermore, this type of motivation could actually be related to our findings in the realm of news websites. Due to the shifting media landscape in many countries, newspapers and other journalistic organizations are constantly looking for new sources of revenue. Some sources put online advertising at roughly 20 percent of advertising revenue and this, along with other cultural and corporate factors, may contribute to the disproportionately large amount of advertising and tracking found on news sites \cite{economist}.
 
 \subsection{Limitations}
 A study collecting data from sources as dynamic as a popular website may encounter several issues with external validity. For example, the tracking activity present on a site may not be entirely deterministic given a certain page load -- factors such as time of day and previous user activity may lead to differing types of activity behind the scenes \cite{exchangewire}. Further confounds such as the automated nature of our data gathering process may introduce other sources of variation; for example, some sites do not set cookies unless a user explicitly opts in \cite{ico}. While some related confounds like time of day were controlled for, the numerous sources of variation may warrant a follow-up study to assess the external validity of our data collection methods.
