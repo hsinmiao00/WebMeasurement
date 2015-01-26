@@ -1,70 +1,80 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: web_finalpaper.aux
-The style file: ieeetr.bst
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ./web.bib
 Warning--entry type for "ico" isn't style-file defined
---line 65 of file ./web.bib
+--line 85 of file ./web.bib
 Warning--entry type for "exchangewire" isn't style-file defined
---line 71 of file ./web.bib
+--line 91 of file ./web.bib
 Warning--entry type for "adblockparser" isn't style-file defined
---line 101 of file ./web.bib
+--line 121 of file ./web.bib
 Warning--entry type for "easylist" isn't style-file defined
---line 107 of file ./web.bib
+--line 127 of file ./web.bib
 Warning--entry type for "Alexa" isn't style-file defined
---line 112 of file ./web.bib
+--line 132 of file ./web.bib
 Warning--entry type for "amazonregion" isn't style-file defined
---line 118 of file ./web.bib
+--line 138 of file ./web.bib
 Warning--entry type for "adblock" isn't style-file defined
---line 134 of file ./web.bib
+--line 154 of file ./web.bib
 Warning--entry type for "selenium" isn't style-file defined
---line 139 of file ./web.bib
+--line 159 of file ./web.bib
 Warning--entry type for "Google_EU_marketingland" isn't style-file defined
---line 194 of file ./web.bib
+--line 214 of file ./web.bib
 Warning--entry type for "wsj_fb" isn't style-file defined
---line 200 of file ./web.bib
+--line 220 of file ./web.bib
 Warning--entry type for "openwpm" isn't style-file defined
---line 212 of file ./web.bib
+--line 232 of file ./web.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in economist
-You've used 22 entries,
-            1876 wiz_defined-function locations,
-            562 strings with 6936 characters,
-and the built_in function-call counts, 2673 in all, are:
-= -- 208
-> -- 79
-< -- 0
-+ -- 41
-- -- 19
-* -- 107
-:= -- 394
-add.period$ -- 12
-call.type$ -- 22
-change.case$ -- 21
-chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 143
-empty$ -- 389
-format.name$ -- 19
-if$ -- 661
+
+Done.
+You've used 30 entries,
+            4039 wiz_defined-function locations,
+            941 strings with 12167 characters,
+and the built_in function-call counts, 10998 in all, are:
+= -- 805
+> -- 181
+< -- 16
++ -- 91
+- -- 40
+* -- 388
+:= -- 1922
+add.period$ -- 60
+call.type$ -- 30
+change.case$ -- 27
+chr.to.int$ -- 33
+cite$ -- 31
+duplicate$ -- 1000
+empty$ -- 1143
+format.name$ -- 47
+if$ -- 2406
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 12
-newline$ -- 70
-num.names$ -- 19
-pop$ -- 106
+int.to.str$ -- 30
+missing$ -- 187
+newline$ -- 115
+num.names$ -- 27
+pop$ -- 521
 preamble$ -- 1
 purify$ -- 0
-quote$ -- 0
-skip$ -- 98
+quote$ -- 2
+skip$ -- 908
 stack$ -- 0
-substring$ -- 0
-swap$ -- 10
-text.length$ -- 0
+substring$ -- 110
+swap$ -- 528
+text.length$ -- 5
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
+top$ -- 5
+type$ -- 30
 warning$ -- 1
-while$ -- 19
-width$ -- 24
-write$ -- 153
+while$ -- 35
+width$ -- 32
+write$ -- 241
 (There were 12 warnings)
