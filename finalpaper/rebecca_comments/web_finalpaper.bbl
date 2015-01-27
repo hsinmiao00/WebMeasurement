@@ -76,6 +76,16 @@ S.~J. Milberg, S.~J. Burke, H.~J. Smith, and E.~A. Kallman, ``Values, personal
   \url{http://doi.acm.org/10.1145/219663.219683}
 \BIBentrySTDinterwordspacing
 
+\bibitem{ur2012}
+B.~Ur, P.~Leon, L.~F. Cranor, R.~Shay, and Y.~Wang, ``Smart, useful, scary,
+  creepy: Perceptions of online behavioral advertising,'' \emph{Symposium On
+  Usable Privacy and Security}, 2012.
+
+\bibitem{mcdonald2010}
+A.~McDonald and L.~F. Cranor, ``Beliefs and behaviors: Internet users'
+  understanding of behavioral advertising,'' \emph{38th Research Conference on
+  Communication, Information and Internet Policy}, 2010.
+
 \bibitem{openwpm_article}
 {Steven Englehardt, Christian Eubank, Peter Zimmerman, Dillon Reisman, Arvind
   Narayanan}, ``{Web Privacy Measurement: Scientific principles, engineering
@@ -107,16 +117,6 @@ S.~J. Milberg, S.~J. Burke, H.~J. Smith, and E.~A. Kallman, ``Values, personal
 {Chris Connolly}, ``{The US Safe Harbor - Fact or Fiction? [online]. available:
   http://www.galexia.com/public/research/articles/research\_articles-pa08.html},''
   \emph{Galexia}, 2008.
-
-\bibitem{ur2012}
-B.~Ur, P.~Leon, L.~F. Cranor, R.~Shay, and Y.~Wang, ``Smart, useful, scary,
-  creepy: Perceptions of online behavioral advertising,'' \emph{Symposium On
-  Usable Privacy and Security}, 2012.
-
-\bibitem{mcdonald2010}
-A.~McDonald and L.~F. Cranor, ``Beliefs and behaviors: Internet users'
-  understanding of behavioral advertising,'' \emph{38th Research Conference on
-  Communication, Information and Internet Policy}, 2010.
 
 \bibitem{guha2010challenges}
 S.~Guha, B.~Cheng, and P.~Francis, ``Challenges in measuring online advertising
