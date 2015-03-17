@@ -78,11 +78,39 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{ Nathaniel Fruchter,
-        Hsin Miao,
-        Scott Stevenson,\thanks{N. Fruchter, H. Miao, and S. Stevenson are with Carnegie Mellon University. Emails: \{nhf,hsinm,sbsteven\}@andrew.cmu.edu}
-        Rebecca Balebako \thanks{R. Balebako is with RAND Corporation; however all work was done while also at Carnegie Mellon. Email: balebako@rand.org}
-        }% <-this % stops a space
+
+% \author{\IEEEauthorblockN{Nathaniel Fruchter,
+% Hsin Miao, Scott Stevenson and
+% Rebecca Balebako\IEEEauthorrefmark{1}}
+% \IEEEauthorblockA{Carnegie Mellon University
+% Email: \IEEEauthorrefmark{1}author.one@add.on.net,
+% \IEEEauthorrefmark{2}author.two@add.on.net,
+% \IEEEauthorrefmark{3}author.three@add.on.net,
+% \IEEEauthorrefmark{4}author.four@add.on.net}}
+
+
+\author{
+    \IEEEauthorblockA{%
+        Nathaniel Fruchter, Hsin Miao, Scott Stevenson\\
+        Carnegie Mellon University\\
+		\{nhf,hsinm,sbsteven\}@andrew.cmu.edu
+    }
+    \and
+    \IEEEauthorblockA{%
+        Rebecca Balebako\\
+        RAND Corporation\\
+		balebako@rand.org%
+    }	
+}%
+
+
+
+
+% \author{ Nathaniel Fruchter,
+%         Hsin Miao,
+%         Scott Stevenson,\thanks{N. Fruchter, H. Miao, and S. Stevenson are with Carnegie Mellon University. Emails: \{nhf,hsinm,sbsteven\}@andrew.cmu.edu}
+%         Rebecca Balebako \thanks{R. Balebako is with RAND Corporation; however all work was done while also at Carnegie Mellon. Email: balebako@rand.org}
+%         }% <-this % stops a space
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
 % and the end of the author line. i.e., if you had this:

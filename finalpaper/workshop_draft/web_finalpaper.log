@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 JAN 2015 21:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 MAR 2015 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -120,22 +120,22 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-** ATTENTION: Overriding command lockouts (line 63).
+** ATTENTION: Overriding command lockouts (line 65).
 (./web_finalpaper.aux)
 \openout1 = `web_finalpaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -151,22 +151,22 @@ LaTeX Font Info:    ... okay on input line 64.
 \makeMPintoPDFobject=\count98
 \everyMPtoPDFconversion=\toks16
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 132.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 162.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 181.
+(Font)              <7> on input line 211.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 181.
+(Font)              <5> on input line 211.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 2547) in paragraph at lines 210--211
+Underfull \hbox (badness 2547) in paragraph at lines 240--241
 []\OT1/ptm/m/n/10 Finally, a \OT1/ptm/m/it/10 mixed/no-policy \OT1/ptm/m/n/10 m
 odel is de-scribes the
  []
@@ -176,27 +176,35 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 239.
+(Font)              <8> on input line 269.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 239.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 239.
+(Font)              <6> on input line 269.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 269.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [3]
 [4]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 401.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 431.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 401.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 431.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [5]
+Underfull \vbox (badness 1742) has occurred while \output is active []
+
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[6] (./web_finalpaper.bbl
+
+(./web_finalpaper.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 34--36
 []\OT1/ptm/m/n/8 Alexa, ``The top 500 sites on the web. [on-line]. avail-able:
  []
@@ -218,13 +226,13 @@ Underfull \hbox (badness 1975) in paragraph at lines 44--47
 /facebook-
  []
 
-
+[7]
 Underfull \hbox (badness 2717) in paragraph at lines 117--120
 \OT1/ptm/m/n/8 able: http://www.galexia.com/public/research/articles/research[]
 articles-
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 []\OT1/ptm/m/n/8 SeleniumHQ, ``Se-le-ni-umHQ. [on-line]. avail-able:
  []
@@ -290,10 +298,10 @@ Before submitting the final camera ready copy, remember to:
 ] (./web_finalpaper.aux) ) 
 Here is how much of TeX's memory you used:
  1953 strings out of 493117
- 30396 string characters out of 6135433
- 102346 words of memory out of 5000000
- 5433 multiletter control sequences out of 15000+600000
- 44120 words of font info for 80 fonts, out of 8000000 for 9000
+ 30395 string characters out of 6135433
+ 103353 words of memory out of 5000000
+ 5434 multiletter control sequences out of 15000+600000
+ 43042 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  26i,15n,19p,1143b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/b
@@ -301,14 +309,14 @@ ase/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 mi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on web_finalpaper.pdf (8 pages, 157249 bytes).
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on web_finalpaper.pdf (8 pages, 157160 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
