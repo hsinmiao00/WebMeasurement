@@ -160,4 +160,10 @@ Scrapinghub, ``{Adblockparser python module. [online]. available:
   http://www.theverge.com/2014/1/31/5363990/how-putins-cronies-seized-control-over-russias-facebook-pavel-durov-vk},''
   \emph{{The Verge}}, 2014.
 
+\bibitem{googlehist}
+\BIBentryALTinterwordspacing
+Google, ``Google web & app activity.'' [Online]. Available:
+  \url{https://support.google.com/accounts/answer/54068?hl=en}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

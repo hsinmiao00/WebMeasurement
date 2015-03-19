@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 MAR 2015 11:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  19 MAR 2015 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -192,8 +192,6 @@ File: omlptm.fd
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 429.
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
 
 [6] (./web_finalpaper.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 34--36
@@ -272,6 +270,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--162
 vk,''
  []
 
+./web_finalpaper.bbl:165: Misplaced alignment tab character &.
+l.165 Google, ``Google web &
+                             app activity.'' [Online]. Available:
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 )
 
 ** Conference Paper **
@@ -288,10 +296,10 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./web_finalpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 1952 strings out of 493117
- 30391 string characters out of 6135433
- 97346 words of memory out of 5000000
- 5433 multiletter control sequences out of 15000+600000
+ 1953 strings out of 493117
+ 30403 string characters out of 6135433
+ 97350 words of memory out of 5000000
+ 5434 multiletter control sequences out of 15000+600000
  43042 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  26i,15n,19p,1162b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -307,7 +315,7 @@ cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on web_finalpaper.pdf (8 pages, 158369 bytes).
+Output written on web_finalpaper.pdf (8 pages, 158770 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream

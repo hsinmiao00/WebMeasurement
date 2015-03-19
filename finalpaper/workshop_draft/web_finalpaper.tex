@@ -461,7 +461,7 @@ We are also interested in outliers about tracking behaviors in the websites. For
 \subsection{Other factors}
 Currently, we do not have enough data to conclusively say whether the different privacy regulatory models are actually statistically different from one another in practice.  However, we did find evidence that privacy regulatory models alone may not indicate the level of technological privacy users get. For instance, we noticed that the US had many more tracking indicators than Japan overall, even though they both follow the sectoral model. We are unsure of exactly why this is the case but we suspect that it may be due to cultural differences or perhaps the types of websites that are popular. It could be the case that the popular sites in Japan fall under a particular sector that is more regulated than those in the US. 
 
-Another possibility along these lines is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan -- ¤?another factor that could lead to the differences in tracking we saw. Furthermore, this type of motivation could actually be related to our findings in the realm of news websites. Due to the shifting media landscape in many countries, newspapers and other journalistic organizations are constantly looking for new sources of revenue. Some sources put online advertising at roughly 20 percent of advertising revenue and this, along with other cultural and corporate factors, may contribute to the disproportionately large amount of advertising and tracking found on news sites \cite{economist}.
+Another possibility along these lines is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan -- another factor that could lead to the differences in tracking we saw. Furthermore, this type of motivation could actually be related to our findings in the realm of news websites. Due to the shifting media landscape in many countries, newspapers and other journalistic organizations are constantly looking for new sources of revenue. Some sources put online advertising at roughly 20 percent of advertising revenue and this, along with other cultural and corporate factors, may contribute to the disproportionately large amount of advertising and tracking found on news sites \cite{economist}.
 
 \subsection{Limitations}
 A study collecting data from sources as dynamic as a popular website may encounter several issues with external validity. For example, the tracking activity present on a site may not be entirely deterministic given a certain page load -- factors such as time of day and previous user activity may lead to differing types of activity behind the scenes \cite{exchangewire}. Further confounds such as the automated nature of our data gathering process may introduce other sources of variation; for example, some sites do not set cookies unless a user explicitly opts in \cite{ico}. While some related confounds like time of day were controlled for, the numerous sources of variation may warrant a follow-up study to assess the external validity of our data collection methods.
@@ -475,46 +475,19 @@ Russia is another interesting case and doesn't have the complication of a nation
 
 It may be valuable to conduct this study again in the future as well. Doing so would allow comparison of tracking throughout time and such time-series data could grant us greater causal and explanatory power in a variety of situations. For instance, there may be value in examining changes in tracking after privacy-related news or policy events. If Do Not Track becomes a widely accepted standard, how different will the tracking landscape look? Would tracking increase or decrease for people not utilizing Do Not Track? Similarly, we could examine if major regulatory rulings by relevant agencies create noticable chnage. If the FTC steps up enforcement in a particular area, is there a visible effect of that ruling?
 
-Another extension to our study would be to look deeper into other methods of tracking. Third-party cookies, third-party HTTP requests, and AdBlock rules don't tell the whole story. For example, even though Google has very few third-party cookies or requests, they are probably tracking users more than other websites that have many third-party cookies or requests. In a similar vein, many major service providers like Google are also their own analytics providers. We do not account for this possibility in our study, but developing methods for doing so may reveal a more complete picture. In a similar vein, tracking is not a web-only construct; similar ``first-party'' tracking metrics could look very different on mobile or other novel platforms.
+Another valuable extension to our study would be to more deeply examine other methods of tracking. Third-party cookies, third-party HTTP requests, and AdBlock rules don't tell the whole story. For example, even though Google has very few third-party cookies or requests, it is well known that Google tracks users throughout their systems using various internal metrics \cite{googlehist}. In a similar vein, many major service providers like Google are also their own analytics providers. We do not account for this possibility in our study, but developing methods for doing so may reveal a more complete picture. In a similar vein, tracking is not a web-only construct; similar ``first-party'' tracking metrics could look very different on mobile or other novel platforms.
 
 Finally, we would like to investigate and better understand more subtle country-level differences. For example, what is causing the US to have much more tracking than Japan even though they are both sectoral countries? We can hypothesize that this may be cultural, or that the popular websites in Japan differ in category from those in the US or that the popular sites in Japan may fall under the regulation of a stricter sector. Questions like these also leave open the possibility of exploring more complex issues at the intersection of privacy, policy, and culture. For instance, richer data at a more granular level could help highlight the interaction between the effects of culture on Internet use, businesses' data collection habits, and regulation.
 
 Since none of these questions can be fully explored with our data, additional research would have to be done to confirm or deny these assumptions. We expect collaboration with economists and local legal and cultural experts could improve understanding in this area. However, once these questions have been answered satisfactorily, we may be closer to evaluating how effective the regulatory models actually are for protecting end users---certainly a question of great importance to all stakeholders. Such information would also open up many relevant paths of inquiry and discussion for the privacy and policy communities, from the challenges of defining a privacy standard to the difficulties of translating regulation into compliance and enforcement in a global, networked environment. 
 
 \section{Conclusion}
-Going into this experiment, we assumed that there would be a significant difference in tracking between countries in different privacy regulatory models. We expected to see the most tracking in the no-model and sectoral model countries, less in the co-regulatory model, and even less in the comprehensive model. To examine this, we developed a method for emperically and repeatably evaluating the web tracking in different countries.  
+Going into this experiment, we assumed that there would be a significant difference in tracking between countries in different privacy regulatory models. We expected to see the most tracking in the no-model and sectoral model countries, less in the co-regulatory model, and even less in the comprehensive model. To examine this, we developed an empirical, repeatable method to evaluate web tracking in different countries.  This method can be used in future studies to measure the impact of policy changes.
 
-We were also interested in determining if the country the website is based in, versus the country we are connecting from, plays a role in the amount of tracking. We were able to conclude that there were significant differences in tracking activity between different countries using several metrics. Due to our limited sample size, though, we were not able to draw strong conclusions regarding the models themselves. However, we were able to quantify many interesting variations in tracking behavior between countries and provide several directions for relevant future work to further investigate these variations.
+We were also interested in determining if the country the website is based in, versus the country we are connecting from, plays a role in the amount of tracking. Due to our limited sample size, though, we were not able to draw strong conclusions regarding the regulatory models themselves. However, we were able to quantify many interesting variations in tracking behavior between countries and provide several directions for relevant future work to further investigate these variations.  We were able to conclude that there were significant differences in tracking activity between different countries using several metrics. 
 
+The subtle country level difference indicate that the privacy regulatory model are not the sole factor impacting web tracking.  For example, the US has much more tracking than Japan even though they are both sectoral countries.  This may be cultural, as the popular websites in one country may differ in category from those in another country due to a cultural preference to view different types of websites. Alternatively, the popular sites in a country may fall under the regulation of a stricter sector, or web sites (such as national news organization) may enjoy financial support that allows them to rely less on advertising. These options highight that privacy may be impacted by regulation and culture that is not directly about privacy or data sharing. Further exploration is needed on the complex issues at the intersection of digital privacy, policy, and culture. 
 
-% if have a single appendix:
-%\appendix[Proof of the Zonklar Equations]
-% or
-%\appendix  % for no appendix heading
-% do not use \section anymore after \appendix, only \section*
-% is possibly needed
-
-% use appendices with more than one appendix
-% then use \section to start each appendix
-% you must declare a \section before using any
-% \subsection or using \label (\appendices by itself
-% starts a section numbered zero.)
-%
-
-
-%\appendices
-%\section{Proof of the First Zonklar Equation}
-%Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-%\section{}
-%Appendix two text goes here.
-
-
-% use section* for acknowledgement
-%\section*{Acknowledgment}
-%The authors would like to thank...
 
 
 % Can use something like this to put references on a page
