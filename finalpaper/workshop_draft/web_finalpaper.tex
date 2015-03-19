@@ -204,7 +204,7 @@ laws have been enacted worldwide with the purpose of protecting internet users' 
  
 Web tracking is implemented in a variety of ways, some of the most popular being third-party cookies and JavaScript tracking code. Commercial websites utilize a diverse plethora of trackers for various purposes such as targeted advertisements. Although privacy laws vary in different countries, there is currently a lack of information as to whether the number and types of trackers differ between countries, and whether this is impacted by different privacy regulation models. The purpose of this paper is to establish a empirical method for determining relationship between the amount of tracking and various countries that employ different privacy regulatory models.
 
-In this project, we compared the amount of trackers on websites that operate in various countries with different privacy models. This paper offers three main contributions.
+In this study, we compared the amount of trackers on websites that operate in various countries with different privacy models. This paper offers three main contributions.
 \begin{itemize}
 \item We build, test, and describe an empirical, automated method for measuring the amount of web tracking in different countries, which can help determine the effectiveness of different privacy regulatory models.
 \item We examine the level of web tracking in four different countries representing three regulatory models, finding significant differences between countries.
@@ -235,7 +235,7 @@ Different privacy regulation models around the world may have different impacts 
 	\item \emph{Comprehensive} regulatory models view privacy as a fundamental human right.  They require companies and organizations protect personal information by placing limits on collection, use, and disclosure. A privacy authority agency enforces privacy laws.  This comprehensive model is adopted in the European Union~\cite{IAPPbook}.  
 	\item In a \emph{sectoral} model, the government enacts privacy laws about a particular industry sector, for example in health or finance, but does not provide fundamental protection on privacy.  The sectoral model is adopted in the United States~\cite{solove2006model}. 
 	\item A \emph{co-regulatory} model relies on industries to develop their privacy policies for data protection.  This is adopted in Australia. 
-	\item Finally, a \emph{mixed/no-policy} model is describes the regimes in which either privacy is not protected, or uses a mix of the other three policies.  According to Swire and Ahmad, this models is adopted in the People's Republic of China~\cite{IAPPbook}. 
+	\item Finally, a \emph{mixed/no-policy} model is describes the regimes in which either privacy is not protected, or uses a mix of the other three policies.  According to Swire and Ahmad, this model is adopted in the People's Republic of China~\cite{IAPPbook}. 
 \end{enumerate}
 
 \subsection{Measuring Advertising and Tracking Activity}
@@ -249,14 +249,13 @@ In order to address and understand the impact of new web technologies on privacy
 The above studies make valuable contributions by taking on tasks like revealing the sources of potential privacy harms, detailing the effects of these third party entities, and taking a user-centric view to studying and enhancing privacy. However, they generally do not explore the impact of industry and country-level policy on the overall incidence of these third parties. Connolly comes the closest, performing an evaluation of various websites' compliance with the European Union's ``Safe Harbor" privacy policy. Finding an astoundingly small subset of companies in compliance with Safe Harbor directives, Connolly discusses the ``significant" privacy risk to consumers resulting from noncompliance   \cite{connolly}. Issues like these raise the necessity for a more comprehensive measurement of jurisdictional differences in tracking and advertising activity.
 
 \subsection{Web Measurement Methodology}
-% \todo{REBECCA: I don't know what you are saying here, so I'm attempting to make it more clear, but I'm not sure I quite have it right}
+
 Englehardt et al. conducted a study that reviewed general experimental frameworks and performed methodological analyses of extant web measurement studies.  They found that web measurement studies are considered challenging for two reasons: causality and automation \cite{openwpm_article}.  Controlled and randomized experiments are difficult in the dynamic, ever-changing web ecosystem \cite{guha2010challenges}. Automation is difficult for several reasons, including that an automated script cannot always mimic real user behavior in browsers~\cite{openwpm_article}.  These difficulties has lead to some inconsistency and reinvention in web measurement. In order to address these issues, Engelhardt et al. authors developed a platform, OpenWPM \cite{openwpm}, that addressed many of the issues of flexibility and scalability surrounding past web measurement studies. 
 OpenWPM is a Python-based web-crawler framework using Selenium \cite{Selenium}. Due to its flexibility and convenience, it has been validated in several studies \cite{openwpm}\cite{openwpm_article}. This framework is utilized in the work in order to avoid further problems, especially those surrounding replication of effort and methodological inconsistencies.
 
 \section{Method}
-% \todo{Here is my attempt at describing the method in a broad swath overview, but you need to correct this paragraph if I am inaccurate}.
 
-We developed an automated method for measuring web privacy in different regulatory environments.  We examined at the quantity and type of web cookies set and third-party HTTP requests made when browsing to popular sites from different countries.  To do so, we automated web browsing to the 250 sites (as determined by Alexa) in different countries at  simultaneously.  We collected data about the browsing sessions, including the HTTP requests and cookies.  We then used a heuristic to examine results specifically related to web tracking.  Finally, we used statistical analysis to compare the differences between countries.  
+We developed an automated method for measuring web privacy in different regulatory environments.  We examined the quantity and type of web cookies set and third-party HTTP requests made when browsing to popular sites from different countries.  To do so, we automated web browsing to the 250 sites (as determined by Alexa) in different countries at  simultaneously.  We collected data about the browsing sessions, including the HTTP requests and cookies.  We then used a heuristic to examine results specifically related to web tracking.  Finally, we used statistical analysis to compare the differences between countries.  
 
 For this method, we needed to overcome several technological hurdles, such as automating browsing from several countries in a controlled manner. To control for the impact of timing, we run the tests from multiple countries at the simultaneously~\cite{guha2010challenges}. Furthermore, we needed a method to determine whether the HTTP requests and cookies were third-party URLs and related to web tracking. In the next subsections, we describe how our method addresses these issues.
 
@@ -264,22 +263,22 @@ For this method, we needed to overcome several technological hurdles, such as au
 
 We have chosen Germany to represent the comprehensive model, the United States and Japan to represent the sectoral model, and Australia to represent the co-regulatory model. Therefore, we sourced our data collection from four different locations.
 
-To source an internet connection point at these various locations around the world, we used Amazon Web Services, or AWS.~\footnote{\url{http://aws.amazon.com}} AWS provides cloud-based virtual machines that can be configured in numerous ways. We installed OpenWPM on these machines and ran our tests from the cloud without having to rely on a proxy to set our location. AWS offers virtual machines in any of the following locations: Virginia (US), Ireland (EU), Frankfurt (EU), Oregon (US), California (US), Singapore (Asia), Sydney (AUS), Sao Paolo (South America), and Tokyo (JP) \cite{amazonregion}. This covers almost all of the regions we would like to examine -- the only regions not represented are Russia and China which are currently not options when using AWS EC2. AWS employs a 'pay-for-what-you-use' model, so it is economically convenient to use. For example, running our study cost under \$5 USD given Amazon's pricing schedule as of November 2014\footnote{We used \texttt{t2.small} instances running Linux at \$0.026 per CPU hour.}.
-% \todo{include the overall cost of the study }.
+To source an internet connection point at these various locations around the world, we used Amazon Web Services, or AWS~\footnote{\url{http://aws.amazon.com}}. AWS provides cloud-based virtual machines that can be configured in numerous ways. We installed OpenWPM on these machines and ran our tests from the cloud without having to rely on a proxy to set our location. AWS offers virtual machines in any of the following locations: Virginia (US), Ireland (EU), Frankfurt (EU), Oregon (US), California (US), Singapore (Asia), Sydney (AU), Sao Paolo (South America), and Tokyo (JP) \cite{amazonregion}. This covers almost all of the regions we would like to examine -- the only regions not represented are Russia and China which are currently not options when using AWS EC2. AWS employs a 'pay-for-what-you-use' model, so it is economically convenient to use. For example, running our study cost under \$5 USD given Amazon's pricing schedule as of November 2014\footnote{We used \texttt{t2.small} instances running Linux at \$0.026 per CPU hour.}.
+
 
 \subsection{Selecting which sites to visit}
-% \todo{ Please check that I am correctly describing what you did, because you don't clarify in the paper}.
-For each country, we crawled the top 250 sites for that country using the Alexa list by country~\footnote{\url{http://www.alexa.com/topsites/}}. Typically these are top level domains and not subpages within a site. While there was some overlap of sites between countries, such as \url{google.com} and \url{wikipedia.org}, there were differences between the country lists.  First, some domains were specific to the country, such as \url{www.facebook.de} in Germany.  Second, many sites were specific to that country or language.  One example of a website specific to Germany is the domain for a popular news journal Der Spiegel (\url{http://www.spiegel.de}), which was not seen on the other country lists.  
+
+For each country, we crawled the top 250 sites for that country using the Alexa list by country~\footnote{\url{http://www.alexa.com/topsites/}}. Typically these are top level domains and not subpages within a site. While there was some overlap of sites between countries, such as \texttt{\url{google.com}} and \url{wikipedia.org}, there were differences between the country lists.  First, some domains were specific to the country, such as \texttt{\url{facebook.de}} in Germany.  Second, many sites were specific to that country or language.  One example of a website specific to Germany is the domain for a popular news journal Der Spiegel (\texttt{\url{spiegel.de}}), which was not seen on the other country lists.  
 
 \subsection{Automating the web crawls}
 
 Our next step was to automate the data collection.  We collected a number of metrics related to tracking, including the number of cookies and HTTP requests. Engelhardt et al.'s OpenWPM platform is a purpose-built web measurement platform that logs a large amount of web session data in a standardized SQLite database format, making it the perfect tool for our study. We utilized the most recent publicly available version of OpenWPM, 0.2.0, for the data collection portion of our study and used the platform's API to programmatically crawl a list of the top 250 websites as defined by Alexa\cite{Alexa}. OpenWPM's Firefox backend was used for the crawl with both JavaScript and Flash enabled.
 
-Two variables of interest are located within different SQLite tables generated by OpenWPM with each crawl: cookies and http\_requests. We extracted the domains of cookies and the URLs of HTTP requests from these two tables by using the sqlite3 library in Python.
+Two variables of interest are located within different SQLite tables generated by OpenWPM with each crawl: \texttt{cookies} and \texttt{http\_requests}. We extracted the domains of cookies and the URLs of HTTP requests from these two tables by using the sqlite3 library in Python.
 
 \subsection{Extracting Third-party HTTP requests and cookies}
 
-In this study, we were not interested in analyzing first-party cookies and HTTP requests, as these are often not considered privacy invasive~\cite{mcdonald2011track}. Therefore, we had to extract the third-party elements of our collected data. In order to further analyze third-party cookies and HTTP requests, we set a rule to determine whether the URL in a record is related to the website where the record was extracted. To be more specific, if the URL in a record does not contain the domain name of the website we are currently visiting, it is a third-party cookie or HTTP request. For example, if a cookie is extracted from amazon.de and the URL is fls-eu.amazon.de, it is a first-party cookie because the domain is identical ('amazon.de'). In contrast, if a cookie also extracted from amazon.de has the domain zanox.com, then the domains are not identical and it is a third-party cookie. By implementing these procedures, we can use statistical tools to analyze the collected data.
+In this study, we were not interested in analyzing first-party cookies and HTTP requests, as these are often not considered privacy invasive~\cite{mcdonald2011track}. Therefore, we had to extract the third-party elements of our collected data. In order to further analyze third-party cookies and HTTP requests, we set a rule to determine whether the URL in a record is related to the website where the record was extracted. To be more specific, if the URL in a record does not contain the domain name of the website we are currently visiting, it is a third-party cookie or HTTP request. For example, if a cookie is extracted from \texttt{amazon.de} and the URL is \texttt{fls-eu.amazon.de}, it is a first-party cookie because the base domain is identical. In contrast, if a cookie also extracted from \texttt{amazon.de} has the domain \texttt{zanox.com}, then the domains are not identical and it is a third-party cookie. By implementing these procedures, we can use statistical tools to analyze the collected data.
 
 \subsection{Tracker Heuristic: AdBlock ``easylists"}
 
@@ -288,11 +287,9 @@ Not all the URLs identified using the above method are neccessarily related to a
 AdBlock Plus \cite{adblock} is a popular browser extension available for both Firefox and Chrome which allows users to filter and block elements on a webpage according to user-specified rules. As evidenced by the extension name, this capability is most often used in service of blocking advertisements, tracking code, or other content deemed annoying, invasive, or objectionable. Due to its open source nature and large, international user base, AdBlock Plus provides a unique resource: a large, crowd-sourced list of rules that allows us to detect the presence of advertising or tracking assets within a list of URLs and page elements. These rules are compiled in two ``easylists"  \cite{easylist} provided on the AdBlock website, with one focused on ad-blocking rules and the other focused on tracker-blocking rules.
 
 Using a similar approach to the one detailed in the last section, we extracted the full URLs of HTTP requests and responses from the OpenWPM crawl database using Python and the sqlite3 library. We then used the adblockparser  \cite{adblockparser} Python module to match the extracted HTTP request and response URLs against the two sets of AdBlock rules mentioned above. The number of positive ad or tracker hits were aggregated by domain, country, and rule set in order to produce summary statistics for use in further analysis. (In this paper, we are using the term ``hit'' to denote one of these positive pattern matches between an AdBlock easylist rule and the domain or URL seen in an HTTP request or cookie.)
-% \todo{if this is what you mean by ''hit" in the tables later, you need to say this specifically.  Eg. "In this paper, when we refer to ``hit" we specifically mean a positive match between and Adblock easy list URL and the domain seen in a HTTP request or cookie."}
+
 
 \section{Results}
-% \todo{You need a paragraph here summarizing the overall results (tell us what you are going to tell us) I've out some filler here as an example, but make sure what I've written is correct, and to add relevant high-level results}
-% \todo{Filled in overall results: guys, make sure this sounds right to you. -nathaniel}
 We ran our script on the top 250 sites for each of our four countries.  We collected all the HTTP requests and cookies from these browsing sessions and then used the heuristic and algorithm described in the previous section to identify probable tracker activity.  We found that visiting the sites from the US yielded the most third-party HTTP requests and third-party cookies. Through additional comparisons with a dataset based on the top 500 sites globally, we also found indications that other factors besides user origin may come into play. For example, a website's country of origin or a server's physical location may have even more impact than a user's geographic location. Differences between countries with the same regulatory model could also indicate differences stemming from other cultural, business, and political factors. 
 
 \subsection{Evaluation Metric: Third-Party Cookies and Requests}
@@ -306,7 +303,7 @@ Table \ref{thirdHTTP} shows the average rank for each country in Kruskal-Wallis 
 
 \begin{table}[t]
 \centering
-\caption{Rank of the number of third-party HTTP domain requests among different countries in Kruskal-Wallis test. The US had significantly more third-party HTTP requests than the other countries.}
+\caption{Rank of the number of third-party HTTP domain requests among different countries using a Kruskal-Wallis test. The US had significantly more third-party HTTP requests than the other countries.}
 \label{thirdHTTP}
 \begin{tabular}{|l|l|}
 \hline
@@ -321,14 +318,12 @@ JP               & 406.69        \\ \hline
 \subsection{Cookies}
 We also compared the number of third-party and first party cookies among different countries. 
 Table \ref{thirdcookie} shows the average rank of number of third-party cookies for each country in Kruskal-Wallis test. Although the difference in total number of first-party cookies is not significant, the difference of number of third-party cookies is significant ($\chi^{2}=13.147; df=2; p=0.004$). This implies that, generally, a visitor to one of the top 250 sites from the United States would be exposed to a comparatively greater amount of web tracking code.
- % \todo{take this up a level: one sentence on the implication, such as "This implies that a visitor from the US would experience more tracking. or whatever it is"}
 
 We found similar results when comparing the number of domains in third-party HTTP requests. There are more third-party cookies in the US compared to Germany ($\chi^{2} = 4.111; df=1; p=0.043$) and Australia. Also, the difference between Germany, Australia, and Japan is not significant.
 
-% \todo{Note: I reordered all the tables by rank}
 \begin{table}[t]
 \centering
-\caption{Rank of the number of third-party cookies among different countries in Kruskal-Wallis test.}
+\caption{Rank of the number of third-party cookies among different countries using a Kruskal-Wallis test.}
 \label{thirdcookie}
 \begin{tabular}{|l|l|}
 \hline
@@ -378,19 +373,12 @@ US               & 0.715   \\  \hline
 
 One crucial phenomenon to test for is the presence of origin-dependent tracking activity--in other words, we wanted to determine if the origin of the user was important or if the origin of the website was important. For example: if user A visits example.com from country A and user B also visits example.com at the same time, but from country B, will they receive the same type and number of trackers?  This analysis was done to determine how heavily geographic factors need to be controlled for in this (and other) studies. Finding that the users' source matters may indicate interesting, adaptive behavior by tracking companies that could warrant further investigation.
 
-% \todo{I'm STILL confused by your use of word churn here.  Ad churn refers to the fact that  you won't see the same ad on different days as ad compaigns change. Your description doesn't sound like churn - I think what you wanted to say is that you isolated the impact of request location.  You found no significant differences from when you visit the same sites from different locations, indicating that the sites do not change their behavior based on visitor's location.  Instead, sites tailored to specific countries are probably where the difference is coming from.   --- later -- ah I see you have a paragraph explaining this later in the text.  Put those two sections together, since we highlight it as a major finding.}
-
 To this end, we crawled Alexa's list of the top 500 global sites from all four of our server locations at identical times and compared matches against Adblock's tracking EasyList. Controlling for outliers, nonparametric tests of both the absolute number of hits by country and the proportions of hits by country show no significant difference (n hits: $\chi^{2}=0.805; df=3; p>0.84$, proportion: $\chi^{2}=0.172; df=3; p>0.98$). Because of this, we can conclude that the impact of request origin will not be a significant factor for us within the scope of our experiment.  
 
 This conclusion is further bolstered by an interesting possibility that stems from a comparison of our country-specific datasets with our new, global dataset. Looking at the series of pairwise comparisons for the top 500 sites (see Table \ref{pairwise500}), none of the differences between countries are significant (all $p>0.71$). This indicates that it may be the website's country origin, not the user's, that matters in terms of tracking activity present. However, there may be other factors that account for this difference in variation, something that will be expanded on in our discussion below. 
 
-% \todo{ok, this is what I wanted you to say earlier... put those sections together somehow}
-
 \subsubsection{More trackers than ads}
 There were significant differences in type of hit (trackers vs. advertisements) within the same top 500 sites. The proportion of requests associated with trackers was significantly higher than the proportion associated with advertisements ($\chi^{2}=45.1; p<0.0001$). A pairwise comparison across the top 500 sites showed that trackers accounted for approximately 2\% more requests than advertisements ($95\% CI [0.015, 0.021]$). This is significant considering the overall proportion of requests for both ads and trackers is 5.4\% ($SEMean = 0.0009, 95\% CI [0.052, 0.056]$). Since trackers, as opposed to ads, do not usually have a visual element, this may imply a ``tip of the iceberg'' issue for users. While awareness of online advertising may be relatively high, the invisibility of online tracking for the typical user may lead to a false sense of privacy for some. 
-% \todo{Do we want to expand on this and talk about Ghostery and stuff? -nathaniel}
-
-% \todo{what are the privacy implications?  That users don't even see the trackers?  Bring this up a level}
 
 \subsubsection{Differences by country}
 
@@ -408,8 +396,6 @@ There were significant differences in type of hit (trackers vs. advertisements) 
    \end{tabular}
 \end{table*}
 
-
-
 Based on our limited sample of countries per regulatory model, we do not draw conclusions about the regulatory models themselves. We do find interesting results when examining each individual country in a series of pairwise comparisons between the top 250 sites in each country.  Differences in the proportion of total HTTP requests associated with trackers differs significantly and may imply the presence of significant variation beyond what can be explained on the country or model level.
 
 \subsubsection{More tracking-related requests in the United States}
@@ -417,11 +403,10 @@ A pairwise examination of the proportion of HTTP requests related to tracking ac
 
 \subsubsection{Differences within the sectoral model}
 It is especially interesting to note the comparisons between our two sectoral model countries, the United States and Japan. Even though they ostensibly have the same regulatory model, the United States showed a significantly greater (all $p<0.02$) amount of tracking-related HTTP requests (anywhere from 2.8\% to 4\% more). Considering the average number of requests per page is over 100, even a 4\% increase in tracking-related requests could indicate the loading of 4 to 5 more tracking elements or scripts per browsing session. This can be seen in the summary statistics shown in \ref{summaryTracking}, which displays the mean number of HTTP requests, hits, and hits as a proportion of total requests for the browsing sessions. 
-% \todo{Is this explanation clear enough? -nathaniel}
 
 \begin{table}[t]	
 \centering
-\caption{Pairwise Comparisons Between Countries for Tracking Hits.}
+\caption{Pairwise Comparisons Between Countries for Tracking Hits}
 \label{pairwise}
 \begin{tabular}{|l|l|l|l|l|}
    \hline
@@ -437,7 +422,7 @@ AU        & AU        & -8.33 & \textless.0001 & {[}-0.031, -0.019{]}\\   \hline
 
 \begin{table}[t]
 \centering
-\caption{Pairwise Comparisons Between Countries for Top 500 Global Sites.}
+\caption{Pairwise Comparisons Between Countries for Top 500 Global Sites}
 \label{pairwise500}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -451,12 +436,13 @@ US                            & AU                            & 0.714           
 \end{tabular}
 \end{table}
 
-
+\let\oldurl=\url
+\def\url#1{\texttt{\oldurl{#1}}}
 
 \section{Discussion}
 
 \subsection{Outliers}
-We are also interested in outliers about tracking behaviors in the websites. For example,  the US, \url{nydailynews.com} has the most number of third-party cookies in top 250 websites. There are 6,546 third-party cookies set when when that website is visited. Other news websites including \url{foxnews.com}, \url{sfgate.com}, \url{drudgereport.com} and \url{nypost.com} all have more than 900 third-party cookies. Similarly, we found that news websites also play important roles in Japan and Australia's third-party cookie statistics. The site \url{theaustralian.com.au} has 1,819 third-party cookies on its website, which is the third most in their top 250 websites. In addition, in Japan, \url{reuters.com}has 1,827 third-party cookies, which is the most in top 250 websites. The finding is interesting because it implies that news websites rely on third-party cookies heavily in the US, Japan, and Australia. However in Germany, the tracking behaviors are not similar to other three countries because most of third-party cookies are set by shopping websites instead of news websites.  
+We are also interested in outliers about tracking behaviors in the websites. For example,  the US, \url{nydailynews.com} has the most number of third-party cookies in top 250 websites. There are 6,546 third-party cookies set when when that website is visited. Other news websites including \url{foxnews.com}, \url{sfgate.com}, \url{drudgereport.com} and \url{nypost.com} all have more than 900 third-party cookies. Similarly, we found that news websites also play important roles in Japan and Australia's third-party cookie statistics. The site \url{theaustralian.com.au} has 1,819 third-party cookies on its website, which is the third most in their top 250 websites. In addition, in Japan, \url{reuters.com} has 1,827 third-party cookies, which is the most in top 250 websites. The finding is interesting because it implies that news websites rely on third-party cookies heavily in the US, Japan, and Australia. However in Germany, the tracking behaviors are not similar to other three countries because most of third-party cookies are set by shopping websites instead of news websites.  
 
 \subsection{Other factors}
 Currently, we do not have enough data to conclusively say whether the different privacy regulatory models are actually statistically different from one another in practice.  However, we did find evidence that privacy regulatory models alone may not indicate the level of technological privacy users get. For instance, we noticed that the US had many more tracking indicators than Japan overall, even though they both follow the sectoral model. We are unsure of exactly why this is the case but we suspect that it may be due to cultural differences or perhaps the types of websites that are popular. It could be the case that the popular sites in Japan fall under a particular sector that is more regulated than those in the US. 
@@ -464,7 +450,7 @@ Currently, we do not have enough data to conclusively say whether the different 
 Another possibility along these lines is that tracking, advertising, and the sale of customer data is not the most popular business model for websites in Japan -- another factor that could lead to the differences in tracking we saw. Furthermore, this type of motivation could actually be related to our findings in the realm of news websites. Due to the shifting media landscape in many countries, newspapers and other journalistic organizations are constantly looking for new sources of revenue. Some sources put online advertising at roughly 20 percent of advertising revenue and this, along with other cultural and corporate factors, may contribute to the disproportionately large amount of advertising and tracking found on news sites \cite{economist}.
 
 \subsection{Limitations}
-A study collecting data from sources as dynamic as a popular website may encounter several issues with external validity. For example, the tracking activity present on a site may not be entirely deterministic given a certain page load -- factors such as time of day and previous user activity may lead to differing types of activity behind the scenes \cite{exchangewire}. Further confounds such as the automated nature of our data gathering process may introduce other sources of variation; for example, some sites do not set cookies unless a user explicitly opts in as a result of EU regulatory action \cite{ico}. While some related confounds like time of day were controlled for, the numerous sources of variation may warrant a follow-up study to assess the external validity of our data collection methods. Finally, our we recognize that these factors lead to an imperfect operationalization of tracking. Indeed, the complex inter-session and inter-device nature of modern tracking technology provide challenges for the web measurement and privacy research community. However, these challenges do provide promising avenues for future work and investigation.
+A study collecting data from sources as dynamic as a popular website may encounter several issues with external validity. For example, the tracking activity present on a site may not be entirely deterministic given a certain page load -- factors such as time of day and previous user activity may lead to differing types of activity behind the scenes \cite{exchangewire}. Further confounds such as the automated nature of our data gathering process may introduce other sources of variation; for example, many EU-targeted sites do not set cookies unless a user explicitly opts in as a result of regulatory action \cite{ico}. While some related confounds like time of day were controlled for, the numerous sources of variation may warrant a follow-up study to assess the external validity of our data collection methods. Finally, our we recognize that these factors lead to an imperfect operationalization of tracking. Indeed, the complex inter-session and inter-device nature of modern tracking technology provide challenges for the web measurement and privacy research community. However, these challenges do provide promising avenues for future work and investigation.
 
 \subsection{Future work}
 Since we were unable to access a node in China and Russia from which to run our script, we have no direct representation of the no privacy model regions. We initially thought that this would directly affect our ability to measure tracking properly but our results have shown that where we connect to a particular website from may have very little to do with tracking. This result is based on a small sample (just the US and Japan) so we would also like to verify this fact over a longer period of time and with more countries prior to making a concrete conclusion. China may be an exception to this finding since they have the ``Great Firewall of China" in place which may distort our results.	
@@ -484,7 +470,7 @@ Going into this experiment, we assumed that there would be a significant differe
 
 We were also interested in determining if the country the website is based in, versus the country we are connecting from, plays a role in the amount of tracking. Due to our limited sample size, though, we were not able to draw strong conclusions regarding the regulatory models themselves. However, we were able to quantify many interesting variations in tracking behavior between countries and provide several directions for relevant future work to further investigate these variations.  We were able to conclude that there were significant differences in tracking activity between different countries using several metrics. 
 
-The subtle country level difference indicate that the privacy regulatory model are not the sole factor impacting web tracking.  For example, the US has much more tracking than Japan even though they are both sectoral countries.  This may be cultural, as the popular websites in one country may differ in category from those in another country due to a cultural preference to view different types of websites. Alternatively, the popular sites in a country may fall under the regulation of a stricter sector, or web sites (such as national news organization) may enjoy financial support that allows them to rely less on advertising. These options highight that privacy may be impacted by regulation and culture that is not directly about privacy or data sharing. Further exploration is needed on the complex issues at the intersection of digital privacy, policy, and culture. 
+The subtle country level difference indicate that the privacy regulatory model are not the sole factor impacting web tracking.  For example, the US has much more tracking than Japan even though they are both sectoral countries.  This may be cultural, as the popular websites in one country may differ in category from those in another country due to a cultural preference to view different types of websites. Alternatively, the popular sites in a country may fall under the regulation of a stricter sector, or web sites (such as national news organizations) may enjoy financial support that allows them to rely less on advertising. These options highight that privacy may be impacted by regulation and culture that is not directly about privacy or data sharing. Further exploration is needed on these complex issues at the intersection of digital privacy, policy, and culture. 
 
 
 
