@@ -1,0 +1,23 @@
+W2SP 2015 - Paper #20 - Revisions
+March 19th, 2015
+
+We would like to thank the reviewers for their time, comments, and thoughtful examination of our workshop paper. 
+
+We encountered several broad themes in the reviewers’ comments. Here, we would like to address several of these critiques provided by the reviewers and note changes made between the accepted draft and the camera-ready submission.
+
+1. Need for more explanation of the regulatory landscape
+
+Reviewer 1 noted the need for a clearer, more focused explanation of the regulatory models we discuss in the paper. This concern was addressed by rewriting a portion of the introduction to better define and characterize the various regulatory models we deal with in the paper.
+
+2. Clearer policy conclusions and implications
+
+Several reviewers stated the need for stronger overall conclusions and implications of our work. While our study was exploratory and was not built to test specific policy interventions or recommendations, we do agree with the need for clarity when it comes to implications and future work. To this end, we expanded our discussion of our methods to mention how they could be used in a policy evaluation context. We also clarified the link between our results, policy, and the cultural context. Finally, we expanded our conclusion to include discussion of these implications.
+
+3. Technical challenges
+
+Reviewers discussed the limitations of our web measurement methodology, especially given the complex nature of modern online tracking and monitoring. We more clearly emphasized this point in our limitations and future work sections and added discussion of some of the challenges inherent in this sort of complex web measurement.
+
+4. Formatting errors
+
+Formatting errors were noted by workshop organizers and have been corrected in this camera-ready version.
+
